@@ -1,0 +1,1322 @@
+{
+  "context": {
+    "data_fim": "2026-08-31",
+    "data_inicio": "2026-06-01",
+    "meses_analisados": 3,
+    "total_custo": 24606.199999999997,
+    "total_movimentacoes": 180,
+    "total_quantidade": 1647.0
+  },
+  "ranking": [
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 25.0,
+          "lead_time": 0.0,
+          "stock_pressure": 21.25
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=0.583): +21.25 pontos.",
+          "Criticidade Alta: +25.00 pontos."
+        ],
+        "total": 46.25
+      },
+      "signal": {
+        "description": "Eletrodo Revestido 2,5 mm possui estoque atual de 7, abaixo do mínimo de 12.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 7.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT005",
+        "metrics": {
+          "estoque_atual": 7.0,
+          "estoque_minimo": 12.0,
+          "gap_estoque_minimo": -5.0
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "CRITICO",
+        "title": "Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 25.0,
+          "lead_time": 0.0,
+          "stock_pressure": 18.75
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=0.750): +18.75 pontos.",
+          "Criticidade Alta: +25.00 pontos."
+        ],
+        "total": 43.75
+      },
+      "signal": {
+        "description": "Disjuntor Tripolar 32 A possui estoque atual de 3, abaixo do mínimo de 4.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 3.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 4.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT014",
+        "metrics": {
+          "estoque_atual": 3.0,
+          "estoque_minimo": 4.0,
+          "gap_estoque_minimo": -1.0
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "CRITICO",
+        "title": "Estoque abaixo do mínimo — Disjuntor Tripolar 32 A",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 6.896552,
+          "criticality": 0.0,
+          "lead_time": 8.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.724 mês(es): +6.90 pontos.",
+          "Lead time de 12 dia(s): +8.00 pontos."
+        ],
+        "total": 14.896552
+      },
+      "signal": {
+        "description": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 0.72 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.7241379310344828
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 9.666666666666666
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 12.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT005",
+        "metrics": {
+          "cobertura_meses": 0.7241379310344828,
+          "lead_time_dias": 12.0,
+          "media_mensal_consumo": 9.666666666666666
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "CRITICO",
+        "title": "Baixa cobertura de estoque — Eletrodo Revestido 2,5 mm",
+        "type": "BAIXA_COBERTURA"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 2.254098,
+          "criticality": 0.0,
+          "lead_time": 4.666667,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.910 mês(es): +2.25 pontos.",
+          "Lead time de 7 dia(s): +4.67 pontos."
+        ],
+        "total": 6.920765
+      },
+      "signal": {
+        "description": "Disco de Corte 7 pol possui cobertura estimada de 0.91 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.9098360655737705
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 81.33333333333333
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT007",
+        "metrics": {
+          "cobertura_meses": 0.9098360655737705,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 81.33333333333333
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "CRITICO",
+        "title": "Baixa cobertura de estoque — Disco de Corte 7 pol",
+        "type": "BAIXA_COBERTURA"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 12.5,
+          "lead_time": 0.0,
+          "stock_pressure": 19.0
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=0.733): +19.00 pontos.",
+          "Criticidade Média: +12.50 pontos."
+        ],
+        "total": 31.5
+      },
+      "signal": {
+        "description": "Luva de Raspa possui estoque atual de 22, abaixo do mínimo de 30.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 22.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Média"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT015",
+        "metrics": {
+          "estoque_atual": 22.0,
+          "estoque_minimo": 30.0,
+          "gap_estoque_minimo": -8.0
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "ALTO",
+        "title": "Estoque abaixo do mínimo — Luva de Raspa",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 12.5,
+          "lead_time": 0.0,
+          "stock_pressure": 17.5
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=0.833): +17.50 pontos.",
+          "Criticidade Média: +12.50 pontos."
+        ],
+        "total": 30.0
+      },
+      "signal": {
+        "description": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6.",
+        "entity": "MAT010",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 5.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 6.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Média"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT010",
+        "metrics": {
+          "estoque_atual": 5.0,
+          "estoque_minimo": 6.0,
+          "gap_estoque_minimo": -1.0
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "ALTO",
+        "title": "Estoque abaixo do mínimo — Lâmina de Serra Sabre",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 15.131579,
+          "criticality": 0.0,
+          "lead_time": 4.666667,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.395 mês(es): +15.13 pontos.",
+          "Lead time de 7 dia(s): +4.67 pontos."
+        ],
+        "total": 19.798246
+      },
+      "signal": {
+        "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 0.39 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.39473684210526316
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 76.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT002",
+        "metrics": {
+          "cobertura_meses": 0.39473684210526316,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 76.0
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Disco Flap 4,5 pol Grão 60",
+        "type": "BAIXA_COBERTURA"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 8.823529,
+          "criticality": 0.0,
+          "lead_time": 6.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.647 mês(es): +8.82 pontos.",
+          "Lead time de 9 dia(s): +6.00 pontos."
+        ],
+        "total": 14.823529
+      },
+      "signal": {
+        "description": "Luva de Raspa possui cobertura estimada de 0.65 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.6470588235294118
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 34.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 9.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT015",
+        "metrics": {
+          "cobertura_meses": 0.6470588235294118,
+          "lead_time_dias": 9.0,
+          "media_mensal_consumo": 34.0
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Luva de Raspa",
+        "type": "BAIXA_COBERTURA"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 9.0
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=1.100): +9.00 pontos."
+        ],
+        "total": 9.0
+      },
+      "signal": {
+        "description": "Máscara Respiratória PFF2 possui estoque atual de 11 para mínimo de 10, razão de 1.10.",
+        "entity": "MAT017",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 11.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 10.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.1
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT017",
+        "metrics": {
+          "estoque_atual": 11.0,
+          "estoque_minimo": 10.0,
+          "razao_estoque_minimo": 1.1
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ALTO",
+        "title": "Estoque próximo do mínimo — Máscara Respiratória PFF2",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 2.074236,
+          "criticality": 0.0,
+          "lead_time": 4.666667,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.917 mês(es): +2.07 pontos.",
+          "Lead time de 7 dia(s): +4.67 pontos."
+        ],
+        "total": 6.740903
+      },
+      "signal": {
+        "description": "Disco de Corte 4,5 pol possui cobertura estimada de 0.92 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.9170305676855895
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 229.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT008",
+        "metrics": {
+          "cobertura_meses": 0.9170305676855895,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 229.0
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Disco de Corte 4,5 pol",
+        "type": "BAIXA_COBERTURA"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 1.0
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=1.233): +1.00 pontos."
+        ],
+        "total": 1.0
+      },
+      "signal": {
+        "description": "Disco de Corte 7 pol possui estoque atual de 74 para mínimo de 60, razão de 1.23.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 74.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 60.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.2333333333333334
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT007",
+        "metrics": {
+          "estoque_atual": 74.0,
+          "estoque_minimo": 60.0,
+          "razao_estoque_minimo": 1.2333333333333334
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ALTO",
+        "title": "Estoque próximo do mínimo — Disco de Corte 7 pol",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 15.0
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=1.000): +15.00 pontos."
+        ],
+        "total": 15.0
+      },
+      "signal": {
+        "description": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.0
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT002",
+        "metrics": {
+          "estoque_atual": 30.0,
+          "estoque_minimo": 30.0,
+          "razao_estoque_minimo": 1.0
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Disco Flap 4,5 pol Grão 60",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 7.5
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=1.125): +7.50 pontos."
+        ],
+        "total": 7.5
+      },
+      "signal": {
+        "description": "Bico de Contato MIG 1,0 mm possui estoque atual de 9 para mínimo de 8, razão de 1.12.",
+        "entity": "MAT004",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 9.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 8.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.125
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT004",
+        "metrics": {
+          "estoque_atual": 9.0,
+          "estoque_minimo": 8.0,
+          "razao_estoque_minimo": 1.125
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Bico de Contato MIG 1,0 mm",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 5.0
+        },
+        "explanations": [
+          "Pressão de estoque (razão atual/mínimo=1.167): +5.00 pontos."
+        ],
+        "total": 5.0
+      },
+      "signal": {
+        "description": "Terminal de Compressão 6 mm² possui estoque atual de 14 para mínimo de 12, razão de 1.17.",
+        "entity": "MAT013",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 14.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.1666666666666667
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT013",
+        "metrics": {
+          "estoque_atual": 14.0,
+          "estoque_minimo": 12.0,
+          "razao_estoque_minimo": 1.1666666666666667
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Terminal de Compressão 6 mm²",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    }
+  ],
+  "report": {
+    "indicators": {
+      "custo_total_consumo": 24606.199999999997,
+      "maior_priority_score": 46.25,
+      "materiais_analisados": 20,
+      "materiais_com_sinal": 10,
+      "movimentacoes_analisadas": 180,
+      "quantidade_total_consumida": 1647.0,
+      "sinais_alto": 7,
+      "sinais_atencao": 3,
+      "sinais_critico": 4,
+      "sinais_info": 0,
+      "total_sinais": 14
+    },
+    "recommendations": [
+      {
+        "action": "Avaliar reposição do material.",
+        "entity": "MAT005",
+        "priority": "CRITICO",
+        "rationale": "Eletrodo Revestido 2,5 mm possui estoque atual de 7, abaixo do mínimo de 12."
+      },
+      {
+        "action": "Avaliar reposição do material.",
+        "entity": "MAT014",
+        "priority": "CRITICO",
+        "rationale": "Disjuntor Tripolar 32 A possui estoque atual de 3, abaixo do mínimo de 4."
+      },
+      {
+        "action": "Avaliar cobertura e planejamento de reposição.",
+        "entity": "MAT005",
+        "priority": "CRITICO",
+        "rationale": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 0.72 mês(es), abaixo do limite de 1.00."
+      },
+      {
+        "action": "Avaliar cobertura e planejamento de reposição.",
+        "entity": "MAT007",
+        "priority": "CRITICO",
+        "rationale": "Disco de Corte 7 pol possui cobertura estimada de 0.91 mês(es), abaixo do limite de 1.00."
+      },
+      {
+        "action": "Avaliar reposição do material.",
+        "entity": "MAT015",
+        "priority": "ALTO",
+        "rationale": "Luva de Raspa possui estoque atual de 22, abaixo do mínimo de 30."
+      },
+      {
+        "action": "Avaliar reposição do material.",
+        "entity": "MAT010",
+        "priority": "ALTO",
+        "rationale": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6."
+      },
+      {
+        "action": "Avaliar cobertura e planejamento de reposição.",
+        "entity": "MAT002",
+        "priority": "ALTO",
+        "rationale": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 0.39 mês(es), abaixo do limite de 1.00."
+      },
+      {
+        "action": "Avaliar cobertura e planejamento de reposição.",
+        "entity": "MAT015",
+        "priority": "ALTO",
+        "rationale": "Luva de Raspa possui cobertura estimada de 0.65 mês(es), abaixo do limite de 1.00."
+      },
+      {
+        "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "entity": "MAT017",
+        "priority": "ALTO",
+        "rationale": "Máscara Respiratória PFF2 possui estoque atual de 11 para mínimo de 10, razão de 1.10."
+      },
+      {
+        "action": "Avaliar cobertura e planejamento de reposição.",
+        "entity": "MAT008",
+        "priority": "ALTO",
+        "rationale": "Disco de Corte 4,5 pol possui cobertura estimada de 0.92 mês(es), abaixo do limite de 1.00."
+      },
+      {
+        "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "entity": "MAT007",
+        "priority": "ALTO",
+        "rationale": "Disco de Corte 7 pol possui estoque atual de 74 para mínimo de 60, razão de 1.23."
+      },
+      {
+        "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "entity": "MAT002",
+        "priority": "ATENCAO",
+        "rationale": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00."
+      },
+      {
+        "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "entity": "MAT004",
+        "priority": "ATENCAO",
+        "rationale": "Bico de Contato MIG 1,0 mm possui estoque atual de 9 para mínimo de 8, razão de 1.12."
+      },
+      {
+        "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "entity": "MAT013",
+        "priority": "ATENCAO",
+        "rationale": "Terminal de Compressão 6 mm² possui estoque atual de 14 para mínimo de 12, razão de 1.17."
+      }
+    ],
+    "signals": [
+      {
+        "description": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 0.72 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.7241379310344828
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 9.666666666666666
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 12.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT005",
+        "metrics": {
+          "cobertura_meses": 0.7241379310344828,
+          "lead_time_dias": 12.0,
+          "media_mensal_consumo": 9.666666666666666,
+          "priority_score": 14.896552
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "CRITICO",
+        "title": "Baixa cobertura de estoque — Eletrodo Revestido 2,5 mm",
+        "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Disco de Corte 7 pol possui cobertura estimada de 0.91 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.9098360655737705
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 81.33333333333333
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT007",
+        "metrics": {
+          "cobertura_meses": 0.9098360655737705,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 81.33333333333333,
+          "priority_score": 6.920765
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "CRITICO",
+        "title": "Baixa cobertura de estoque — Disco de Corte 7 pol",
+        "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Eletrodo Revestido 2,5 mm possui estoque atual de 7, abaixo do mínimo de 12.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 7.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT005",
+        "metrics": {
+          "estoque_atual": 7.0,
+          "estoque_minimo": 12.0,
+          "gap_estoque_minimo": -5.0,
+          "priority_score": 46.25
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "CRITICO",
+        "title": "Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      },
+      {
+        "description": "Disjuntor Tripolar 32 A possui estoque atual de 3, abaixo do mínimo de 4.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 3.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 4.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT014",
+        "metrics": {
+          "estoque_atual": 3.0,
+          "estoque_minimo": 4.0,
+          "gap_estoque_minimo": -1.0,
+          "priority_score": 43.75
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "CRITICO",
+        "title": "Estoque abaixo do mínimo — Disjuntor Tripolar 32 A",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      },
+      {
+        "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 0.39 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.39473684210526316
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 76.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT002",
+        "metrics": {
+          "cobertura_meses": 0.39473684210526316,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 76.0,
+          "priority_score": 19.798246
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Disco Flap 4,5 pol Grão 60",
+        "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Disco de Corte 4,5 pol possui cobertura estimada de 0.92 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.9170305676855895
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 229.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT008",
+        "metrics": {
+          "cobertura_meses": 0.9170305676855895,
+          "lead_time_dias": 7.0,
+          "media_mensal_consumo": 229.0,
+          "priority_score": 6.740903
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Disco de Corte 4,5 pol",
+        "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Luva de Raspa possui cobertura estimada de 0.65 mês(es), abaixo do limite de 1.00.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Meses estimados de cobertura com base na média mensal de consumo.",
+            "metric": "cobertura_meses",
+            "source": "features",
+            "value": 0.6470588235294118
+          },
+          {
+            "description": "",
+            "metric": "media_mensal_consumo",
+            "source": "features",
+            "value": 34.0
+          },
+          {
+            "description": "Tempo de reposição cadastrado.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 9.0
+          }
+        ],
+        "id": "LOW-COVERAGE-MAT015",
+        "metrics": {
+          "cobertura_meses": 0.6470588235294118,
+          "lead_time_dias": 9.0,
+          "media_mensal_consumo": 34.0,
+          "priority_score": 14.823529
+        },
+        "recommended_action": "Avaliar cobertura e planejamento de reposição.",
+        "rule_origin": "rule_low_coverage",
+        "severity": "ALTO",
+        "title": "Baixa cobertura de estoque — Luva de Raspa",
+        "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6.",
+        "entity": "MAT010",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 5.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 6.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Média"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT010",
+        "metrics": {
+          "estoque_atual": 5.0,
+          "estoque_minimo": 6.0,
+          "gap_estoque_minimo": -1.0,
+          "priority_score": 30.0
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "ALTO",
+        "title": "Estoque abaixo do mínimo — Lâmina de Serra Sabre",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      },
+      {
+        "description": "Luva de Raspa possui estoque atual de 22, abaixo do mínimo de 30.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Quantidade disponível no estoque.",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 22.0
+          },
+          {
+            "description": "Nível mínimo registrado para o material.",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "Criticidade original cadastrada.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Média"
+          }
+        ],
+        "id": "STOCK-BELOW-MIN-MAT015",
+        "metrics": {
+          "estoque_atual": 22.0,
+          "estoque_minimo": 30.0,
+          "gap_estoque_minimo": -8.0,
+          "priority_score": 31.5
+        },
+        "recommended_action": "Avaliar reposição do material.",
+        "rule_origin": "rule_stock_below_minimum",
+        "severity": "ALTO",
+        "title": "Estoque abaixo do mínimo — Luva de Raspa",
+        "type": "ESTOQUE_ABAIXO_MINIMO"
+      },
+      {
+        "description": "Disco de Corte 7 pol possui estoque atual de 74 para mínimo de 60, razão de 1.23.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 74.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 60.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.2333333333333334
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT007",
+        "metrics": {
+          "estoque_atual": 74.0,
+          "estoque_minimo": 60.0,
+          "priority_score": 1.0,
+          "razao_estoque_minimo": 1.2333333333333334
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ALTO",
+        "title": "Estoque próximo do mínimo — Disco de Corte 7 pol",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      },
+      {
+        "description": "Máscara Respiratória PFF2 possui estoque atual de 11 para mínimo de 10, razão de 1.10.",
+        "entity": "MAT017",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 11.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 10.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.1
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT017",
+        "metrics": {
+          "estoque_atual": 11.0,
+          "estoque_minimo": 10.0,
+          "priority_score": 9.0,
+          "razao_estoque_minimo": 1.1
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ALTO",
+        "title": "Estoque próximo do mínimo — Máscara Respiratória PFF2",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      },
+      {
+        "description": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 30.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.0
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT002",
+        "metrics": {
+          "estoque_atual": 30.0,
+          "estoque_minimo": 30.0,
+          "priority_score": 15.0,
+          "razao_estoque_minimo": 1.0
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Disco Flap 4,5 pol Grão 60",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      },
+      {
+        "description": "Bico de Contato MIG 1,0 mm possui estoque atual de 9 para mínimo de 8, razão de 1.12.",
+        "entity": "MAT004",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 9.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 8.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.125
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT004",
+        "metrics": {
+          "estoque_atual": 9.0,
+          "estoque_minimo": 8.0,
+          "priority_score": 7.5,
+          "razao_estoque_minimo": 1.125
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Bico de Contato MIG 1,0 mm",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      },
+      {
+        "description": "Terminal de Compressão 6 mm² possui estoque atual de 14 para mínimo de 12, razão de 1.17.",
+        "entity": "MAT013",
+        "evidences": [
+          {
+            "description": "",
+            "metric": "Estoque_Atual",
+            "source": "estoque",
+            "value": 14.0
+          },
+          {
+            "description": "",
+            "metric": "Estoque_Minimo",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Relação entre estoque atual e mínimo.",
+            "metric": "razao_estoque_minimo",
+            "source": "features",
+            "value": 1.1666666666666667
+          }
+        ],
+        "id": "STOCK-NEAR-MIN-MAT013",
+        "metrics": {
+          "estoque_atual": 14.0,
+          "estoque_minimo": 12.0,
+          "priority_score": 5.0,
+          "razao_estoque_minimo": 1.1666666666666667
+        },
+        "recommended_action": "Acompanhar o estoque e avaliar necessidade de reposição.",
+        "rule_origin": "rule_stock_near_minimum",
+        "severity": "ATENCAO",
+        "title": "Estoque próximo do mínimo — Terminal de Compressão 6 mm²",
+        "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    ],
+    "signals_by_severity": {
+      "ALTO": 7,
+      "ATENCAO": 3,
+      "CRITICO": 4,
+      "INFO": 0
+    },
+    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 14 sinais: 4 críticos, 7 altos, 3 de atenção e 0 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
+    "total_signals": 14
+  }
+}

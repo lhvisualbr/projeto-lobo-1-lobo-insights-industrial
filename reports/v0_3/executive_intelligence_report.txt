@@ -1,0 +1,37 @@
+Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 14 sinais: 4 críticos, 7 altos, 3 de atenção e 0 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.
+
+PRINCIPAIS PRIORIDADES
+
+1. MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm
+   Severidade: CRITICO
+   Score: 46,25
+   Motivo: Eletrodo Revestido 2,5 mm possui estoque atual de 7, abaixo do mínimo de 12.
+2. MAT014 — Estoque abaixo do mínimo — Disjuntor Tripolar 32 A
+   Severidade: CRITICO
+   Score: 43,75
+   Motivo: Disjuntor Tripolar 32 A possui estoque atual de 3, abaixo do mínimo de 4.
+3. MAT005 — Baixa cobertura de estoque — Eletrodo Revestido 2,5 mm
+   Severidade: CRITICO
+   Score: 14,90
+   Motivo: Eletrodo Revestido 2,5 mm possui cobertura estimada de 0.72 mês(es), abaixo do limite de 1.00.
+4. MAT007 — Baixa cobertura de estoque — Disco de Corte 7 pol
+   Severidade: CRITICO
+   Score: 6,92
+   Motivo: Disco de Corte 7 pol possui cobertura estimada de 0.91 mês(es), abaixo do limite de 1.00.
+5. MAT015 — Estoque abaixo do mínimo — Luva de Raspa
+   Severidade: ALTO
+   Score: 31,50
+   Motivo: Luva de Raspa possui estoque atual de 22, abaixo do mínimo de 30.
+
+RECOMENDAÇÕES
+
+- MAT005 [CRITICO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição.
+- MAT007 [CRITICO]: Avaliar cobertura e planejamento de reposição. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT014 [CRITICO]: Avaliar reposição do material.
+- MAT002 [ALTO]: Avaliar cobertura e planejamento de reposição. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT008 [ALTO]: Avaliar cobertura e planejamento de reposição.
+- MAT010 [ALTO]: Avaliar reposição do material.
+- MAT015 [ALTO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição.
+- MAT017 [ALTO]: Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT004 [ATENCAO]: Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT013 [ATENCAO]: Acompanhar o estoque e avaliar necessidade de reposição.
