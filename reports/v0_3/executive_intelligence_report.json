@@ -311,6 +311,57 @@
     {
       "priority": {
         "components": {
+          "consumption_variation": 25.0,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de 250.00% (magnitude 250.00%): +25.00 pontos."
+        ],
+        "total": 25.0
+      },
+      "signal": {
+        "description": "Máscara Respiratória PFF2 apresentou crescimento de 250.00% no consumo do último mês, passando de 2.00 para 7.00.",
+        "entity": "MAT017",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 7.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": 250.0
+          }
+        ],
+        "id": "CONSUMPTION-GROWTH-MAT017",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 7.0,
+          "limite_variacao_pct": 30.0,
+          "variacao_consumo_pct": 250.0
+        },
+        "recommended_action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "rule_origin": "rule_consumption_growth",
+        "severity": "ALTO",
+        "title": "Crescimento relevante de consumo — Máscara Respiratória PFF2",
+        "type": "CRESCIMENTO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 15.131579,
           "criticality": 0.0,
           "lead_time": 4.666667,
@@ -559,6 +610,312 @@
     {
       "priority": {
         "components": {
+          "consumption_variation": 25.0,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -100.00% (magnitude 100.00%): +25.00 pontos."
+        ],
+        "total": 25.0
+      },
+      "signal": {
+        "description": "Arame MIG 1,0 mm Bobina apresentou redução de 100.00% no consumo do último mês, passando de 2.00 para 0.00.",
+        "entity": "MAT006",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 0.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -100.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT006",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 0.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -100.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Arame MIG 1,0 mm Bobina",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 23.134328,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -92.54% (magnitude 92.54%): +23.13 pontos."
+        ],
+        "total": 23.134328
+      },
+      "signal": {
+        "description": "Disco de Desbaste 7 pol apresentou redução de 92.54% no consumo do último mês, passando de 67.00 para 5.00.",
+        "entity": "MAT001",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 67.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -92.53731343283582
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT001",
+        "metrics": {
+          "consumo_mes_anterior": 67.0,
+          "consumo_ultimo_mes": 5.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -92.53731343283582
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Disco de Desbaste 7 pol",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 22.395833,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -89.58% (magnitude 89.58%): +22.40 pontos."
+        ],
+        "total": 22.395833
+      },
+      "signal": {
+        "description": "Luva de Raspa apresentou redução de 89.58% no consumo do último mês, passando de 48.00 para 5.00.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 48.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -89.58333333333334
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT015",
+        "metrics": {
+          "consumo_mes_anterior": 48.0,
+          "consumo_ultimo_mes": 5.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -89.58333333333334
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Luva de Raspa",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 21.666667,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -86.67% (magnitude 86.67%): +21.67 pontos."
+        ],
+        "total": 21.666667
+      },
+      "signal": {
+        "description": "Bico de Contato MIG 1,0 mm apresentou redução de 86.67% no consumo do último mês, passando de 15.00 para 2.00.",
+        "entity": "MAT004",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 15.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -86.66666666666667
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT004",
+        "metrics": {
+          "consumo_mes_anterior": 15.0,
+          "consumo_ultimo_mes": 2.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -86.66666666666667
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Bico de Contato MIG 1,0 mm",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 16.336634,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -65.35% (magnitude 65.35%): +16.34 pontos."
+        ],
+        "total": 16.336634
+      },
+      "signal": {
+        "description": "Disco Flap 4,5 pol Grão 60 apresentou redução de 65.35% no consumo do último mês, passando de 101.00 para 35.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 101.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 35.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -65.34653465346535
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT002",
+        "metrics": {
+          "consumo_mes_anterior": 101.0,
+          "consumo_ultimo_mes": 35.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -65.34653465346535
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Disco Flap 4,5 pol Grão 60",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 15.789474,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -63.16% (magnitude 63.16%): +15.79 pontos."
+        ],
+        "total": 15.789474
+      },
+      "signal": {
+        "description": "Eletrodo Revestido 2,5 mm apresentou redução de 63.16% no consumo do último mês, passando de 19.00 para 7.00.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 19.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 7.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -63.1578947368421
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT005",
+        "metrics": {
+          "consumo_mes_anterior": 19.0,
+          "consumo_ultimo_mes": 7.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -63.1578947368421
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Eletrodo Revestido 2,5 mm",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 0.0,
           "criticality": 0.0,
           "lead_time": 0.0,
@@ -603,6 +960,210 @@
         "severity": "ATENCAO",
         "title": "Estoque próximo do mínimo — Disco Flap 4,5 pol Grão 60",
         "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 13.461538,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -53.85% (magnitude 53.85%): +13.46 pontos."
+        ],
+        "total": 13.461538
+      },
+      "signal": {
+        "description": "Lixa de Ferro Grão 80 apresentou redução de 53.85% no consumo do último mês, passando de 13.00 para 6.00.",
+        "entity": "MAT003",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 13.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 6.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -53.84615384615385
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT003",
+        "metrics": {
+          "consumo_mes_anterior": 13.0,
+          "consumo_ultimo_mes": 6.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -53.84615384615385
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Lixa de Ferro Grão 80",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 12.5,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -50.00% (magnitude 50.00%): +12.50 pontos."
+        ],
+        "total": 12.5
+      },
+      "signal": {
+        "description": "Lâmina de Serra Sabre apresentou redução de 50.00% no consumo do último mês, passando de 2.00 para 1.00.",
+        "entity": "MAT010",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 1.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -50.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT010",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 1.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -50.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Lâmina de Serra Sabre",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 12.5,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -50.00% (magnitude 50.00%): +12.50 pontos."
+        ],
+        "total": 12.5
+      },
+      "signal": {
+        "description": "Terminal de Compressão 6 mm² apresentou redução de 50.00% no consumo do último mês, passando de 6.00 para 3.00.",
+        "entity": "MAT013",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 6.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -50.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT013",
+        "metrics": {
+          "consumo_mes_anterior": 6.0,
+          "consumo_ultimo_mes": 3.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -50.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Terminal de Compressão 6 mm²",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 11.538462,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de 46.15% (magnitude 46.15%): +11.54 pontos."
+        ],
+        "total": 11.538462
+      },
+      "signal": {
+        "description": "Óculos de Proteção Incolor apresentou crescimento de 46.15% no consumo do último mês, passando de 13.00 para 19.00.",
+        "entity": "MAT016",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 13.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 19.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": 46.15384615384615
+          }
+        ],
+        "id": "CONSUMPTION-GROWTH-MAT016",
+        "metrics": {
+          "consumo_mes_anterior": 13.0,
+          "consumo_ultimo_mes": 19.0,
+          "limite_variacao_pct": 30.0,
+          "variacao_consumo_pct": 46.15384615384615
+        },
+        "recommended_action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "rule_origin": "rule_consumption_growth",
+        "severity": "ATENCAO",
+        "title": "Crescimento relevante de consumo — Óculos de Proteção Incolor",
+        "type": "CRESCIMENTO_CONSUMO"
       }
     },
     {
@@ -702,6 +1263,210 @@
         "title": "Estoque próximo do mínimo — Terminal de Compressão 6 mm²",
         "type": "ESTOQUE_PROXIMO_MINIMO"
       }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 11.494253,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -45.98% (magnitude 45.98%): +11.49 pontos."
+        ],
+        "total": 11.494253
+      },
+      "signal": {
+        "description": "Disco de Corte 7 pol apresentou redução de 45.98% no consumo do último mês, passando de 87.00 para 47.00.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 87.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 47.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -45.97701149425287
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT007",
+        "metrics": {
+          "consumo_mes_anterior": 87.0,
+          "consumo_ultimo_mes": 47.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -45.97701149425287
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disco de Corte 7 pol",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 10.0,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -40.00% (magnitude 40.00%): +10.00 pontos."
+        ],
+        "total": 10.0
+      },
+      "signal": {
+        "description": "Cabo Flexível 2,5 mm² Rolo apresentou redução de 40.00% no consumo do último mês, passando de 5.00 para 3.00.",
+        "entity": "MAT011",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -40.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT011",
+        "metrics": {
+          "consumo_mes_anterior": 5.0,
+          "consumo_ultimo_mes": 3.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -40.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Cabo Flexível 2,5 mm² Rolo",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 8.416667,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -33.67% (magnitude 33.67%): +8.42 pontos."
+        ],
+        "total": 8.416667
+      },
+      "signal": {
+        "description": "Disco de Corte 4,5 pol apresentou redução de 33.67% no consumo do último mês, passando de 300.00 para 199.00.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 300.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 199.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -33.666666666666664
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT008",
+        "metrics": {
+          "consumo_mes_anterior": 300.0,
+          "consumo_ultimo_mes": 199.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -33.666666666666664
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disco de Corte 4,5 pol",
+        "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_variation": 8.333333,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Variação de consumo de -33.33% (magnitude 33.33%): +8.33 pontos."
+        ],
+        "total": 8.333333
+      },
+      "signal": {
+        "description": "Disjuntor Tripolar 32 A apresentou redução de 33.33% no consumo do último mês, passando de 3.00 para 2.00.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -33.33333333333333
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT014",
+        "metrics": {
+          "consumo_mes_anterior": 3.0,
+          "consumo_ultimo_mes": 2.0,
+          "limite_variacao_pct": -30.0,
+          "variacao_consumo_pct": -33.33333333333333
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disjuntor Tripolar 32 A",
+        "type": "REDUCAO_CONSUMO"
+      }
     }
   ],
   "report": {
@@ -709,14 +1474,14 @@
       "custo_total_consumo": 24606.199999999997,
       "maior_priority_score": 46.25,
       "materiais_analisados": 20,
-      "materiais_com_sinal": 10,
+      "materiais_com_sinal": 15,
       "movimentacoes_analisadas": 180,
       "quantidade_total_consumida": 1647.0,
-      "sinais_alto": 7,
-      "sinais_atencao": 3,
+      "sinais_alto": 8,
+      "sinais_atencao": 13,
       "sinais_critico": 4,
-      "sinais_info": 0,
-      "total_sinais": 14
+      "sinais_info": 4,
+      "total_sinais": 29
     },
     "recommendations": [
       {
@@ -756,6 +1521,12 @@
         "rationale": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6."
       },
       {
+        "action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "entity": "MAT017",
+        "priority": "ALTO",
+        "rationale": "Máscara Respiratória PFF2 apresentou crescimento de 250.00% no consumo do último mês, passando de 2.00 para 7.00."
+      },
+      {
         "action": "Avaliar cobertura e planejamento de reposição.",
         "entity": "MAT002",
         "priority": "ALTO",
@@ -786,10 +1557,70 @@
         "rationale": "Disco de Corte 7 pol possui estoque atual de 74 para mínimo de 60, razão de 1.23."
       },
       {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT006",
+        "priority": "ATENCAO",
+        "rationale": "Arame MIG 1,0 mm Bobina apresentou redução de 100.00% no consumo do último mês, passando de 2.00 para 0.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT001",
+        "priority": "ATENCAO",
+        "rationale": "Disco de Desbaste 7 pol apresentou redução de 92.54% no consumo do último mês, passando de 67.00 para 5.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT015",
+        "priority": "ATENCAO",
+        "rationale": "Luva de Raspa apresentou redução de 89.58% no consumo do último mês, passando de 48.00 para 5.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT004",
+        "priority": "ATENCAO",
+        "rationale": "Bico de Contato MIG 1,0 mm apresentou redução de 86.67% no consumo do último mês, passando de 15.00 para 2.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT002",
+        "priority": "ATENCAO",
+        "rationale": "Disco Flap 4,5 pol Grão 60 apresentou redução de 65.35% no consumo do último mês, passando de 101.00 para 35.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT005",
+        "priority": "ATENCAO",
+        "rationale": "Eletrodo Revestido 2,5 mm apresentou redução de 63.16% no consumo do último mês, passando de 19.00 para 7.00."
+      },
+      {
         "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
         "entity": "MAT002",
         "priority": "ATENCAO",
         "rationale": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT003",
+        "priority": "ATENCAO",
+        "rationale": "Lixa de Ferro Grão 80 apresentou redução de 53.85% no consumo do último mês, passando de 13.00 para 6.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT010",
+        "priority": "ATENCAO",
+        "rationale": "Lâmina de Serra Sabre apresentou redução de 50.00% no consumo do último mês, passando de 2.00 para 1.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT013",
+        "priority": "ATENCAO",
+        "rationale": "Terminal de Compressão 6 mm² apresentou redução de 50.00% no consumo do último mês, passando de 6.00 para 3.00."
+      },
+      {
+        "action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "entity": "MAT016",
+        "priority": "ATENCAO",
+        "rationale": "Óculos de Proteção Incolor apresentou crescimento de 46.15% no consumo do último mês, passando de 13.00 para 19.00."
       },
       {
         "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
@@ -802,6 +1633,30 @@
         "entity": "MAT013",
         "priority": "ATENCAO",
         "rationale": "Terminal de Compressão 6 mm² possui estoque atual de 14 para mínimo de 12, razão de 1.17."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT007",
+        "priority": "INFO",
+        "rationale": "Disco de Corte 7 pol apresentou redução de 45.98% no consumo do último mês, passando de 87.00 para 47.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT011",
+        "priority": "INFO",
+        "rationale": "Cabo Flexível 2,5 mm² Rolo apresentou redução de 40.00% no consumo do último mês, passando de 5.00 para 3.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT008",
+        "priority": "INFO",
+        "rationale": "Disco de Corte 4,5 pol apresentou redução de 33.67% no consumo do último mês, passando de 300.00 para 199.00."
+      },
+      {
+        "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "entity": "MAT014",
+        "priority": "INFO",
+        "rationale": "Disjuntor Tripolar 32 A apresentou redução de 33.33% no consumo do último mês, passando de 3.00 para 2.00."
       }
     ],
     "signals": [
@@ -948,6 +1803,43 @@
         "severity": "CRITICO",
         "title": "Estoque abaixo do mínimo — Disjuntor Tripolar 32 A",
         "type": "ESTOQUE_ABAIXO_MINIMO"
+      },
+      {
+        "description": "Máscara Respiratória PFF2 apresentou crescimento de 250.00% no consumo do último mês, passando de 2.00 para 7.00.",
+        "entity": "MAT017",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 7.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": 250.0
+          }
+        ],
+        "id": "CONSUMPTION-GROWTH-MAT017",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 7.0,
+          "limite_variacao_pct": 30.0,
+          "priority_score": 25.0,
+          "variacao_consumo_pct": 250.0
+        },
+        "recommended_action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "rule_origin": "rule_consumption_growth",
+        "severity": "ALTO",
+        "title": "Crescimento relevante de consumo — Máscara Respiratória PFF2",
+        "type": "CRESCIMENTO_CONSUMO"
       },
       {
         "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 0.39 mês(es), abaixo do limite de 1.00.",
@@ -1202,6 +2094,376 @@
         "type": "ESTOQUE_PROXIMO_MINIMO"
       },
       {
+        "description": "Disco de Desbaste 7 pol apresentou redução de 92.54% no consumo do último mês, passando de 67.00 para 5.00.",
+        "entity": "MAT001",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 67.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -92.53731343283582
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT001",
+        "metrics": {
+          "consumo_mes_anterior": 67.0,
+          "consumo_ultimo_mes": 5.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 23.134328,
+          "variacao_consumo_pct": -92.53731343283582
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Disco de Desbaste 7 pol",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Disco Flap 4,5 pol Grão 60 apresentou redução de 65.35% no consumo do último mês, passando de 101.00 para 35.00.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 101.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 35.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -65.34653465346535
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT002",
+        "metrics": {
+          "consumo_mes_anterior": 101.0,
+          "consumo_ultimo_mes": 35.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 16.336634,
+          "variacao_consumo_pct": -65.34653465346535
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Disco Flap 4,5 pol Grão 60",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Lixa de Ferro Grão 80 apresentou redução de 53.85% no consumo do último mês, passando de 13.00 para 6.00.",
+        "entity": "MAT003",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 13.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 6.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -53.84615384615385
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT003",
+        "metrics": {
+          "consumo_mes_anterior": 13.0,
+          "consumo_ultimo_mes": 6.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 13.461538,
+          "variacao_consumo_pct": -53.84615384615385
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Lixa de Ferro Grão 80",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Bico de Contato MIG 1,0 mm apresentou redução de 86.67% no consumo do último mês, passando de 15.00 para 2.00.",
+        "entity": "MAT004",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 15.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -86.66666666666667
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT004",
+        "metrics": {
+          "consumo_mes_anterior": 15.0,
+          "consumo_ultimo_mes": 2.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 21.666667,
+          "variacao_consumo_pct": -86.66666666666667
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Bico de Contato MIG 1,0 mm",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Eletrodo Revestido 2,5 mm apresentou redução de 63.16% no consumo do último mês, passando de 19.00 para 7.00.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 19.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 7.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -63.1578947368421
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT005",
+        "metrics": {
+          "consumo_mes_anterior": 19.0,
+          "consumo_ultimo_mes": 7.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 15.789474,
+          "variacao_consumo_pct": -63.1578947368421
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Eletrodo Revestido 2,5 mm",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Arame MIG 1,0 mm Bobina apresentou redução de 100.00% no consumo do último mês, passando de 2.00 para 0.00.",
+        "entity": "MAT006",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 0.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -100.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT006",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 0.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 25.0,
+          "variacao_consumo_pct": -100.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Arame MIG 1,0 mm Bobina",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Lâmina de Serra Sabre apresentou redução de 50.00% no consumo do último mês, passando de 2.00 para 1.00.",
+        "entity": "MAT010",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 1.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -50.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT010",
+        "metrics": {
+          "consumo_mes_anterior": 2.0,
+          "consumo_ultimo_mes": 1.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 12.5,
+          "variacao_consumo_pct": -50.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Lâmina de Serra Sabre",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Terminal de Compressão 6 mm² apresentou redução de 50.00% no consumo do último mês, passando de 6.00 para 3.00.",
+        "entity": "MAT013",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 6.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -50.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT013",
+        "metrics": {
+          "consumo_mes_anterior": 6.0,
+          "consumo_ultimo_mes": 3.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 12.5,
+          "variacao_consumo_pct": -50.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Terminal de Compressão 6 mm²",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Luva de Raspa apresentou redução de 89.58% no consumo do último mês, passando de 48.00 para 5.00.",
+        "entity": "MAT015",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 48.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -89.58333333333334
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT015",
+        "metrics": {
+          "consumo_mes_anterior": 48.0,
+          "consumo_ultimo_mes": 5.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 22.395833,
+          "variacao_consumo_pct": -89.58333333333334
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "ATENCAO",
+        "title": "Redução relevante de consumo — Luva de Raspa",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Óculos de Proteção Incolor apresentou crescimento de 46.15% no consumo do último mês, passando de 13.00 para 19.00.",
+        "entity": "MAT016",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 13.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 19.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": 46.15384615384615
+          }
+        ],
+        "id": "CONSUMPTION-GROWTH-MAT016",
+        "metrics": {
+          "consumo_mes_anterior": 13.0,
+          "consumo_ultimo_mes": 19.0,
+          "limite_variacao_pct": 30.0,
+          "priority_score": 11.538462,
+          "variacao_consumo_pct": 46.15384615384615
+        },
+        "recommended_action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
+        "rule_origin": "rule_consumption_growth",
+        "severity": "ATENCAO",
+        "title": "Crescimento relevante de consumo — Óculos de Proteção Incolor",
+        "type": "CRESCIMENTO_CONSUMO"
+      },
+      {
         "description": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00.",
         "entity": "MAT002",
         "evidences": [
@@ -1308,15 +2570,163 @@
         "severity": "ATENCAO",
         "title": "Estoque próximo do mínimo — Terminal de Compressão 6 mm²",
         "type": "ESTOQUE_PROXIMO_MINIMO"
+      },
+      {
+        "description": "Disco de Corte 7 pol apresentou redução de 45.98% no consumo do último mês, passando de 87.00 para 47.00.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 87.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 47.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -45.97701149425287
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT007",
+        "metrics": {
+          "consumo_mes_anterior": 87.0,
+          "consumo_ultimo_mes": 47.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 11.494253,
+          "variacao_consumo_pct": -45.97701149425287
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disco de Corte 7 pol",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Disco de Corte 4,5 pol apresentou redução de 33.67% no consumo do último mês, passando de 300.00 para 199.00.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 300.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 199.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -33.666666666666664
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT008",
+        "metrics": {
+          "consumo_mes_anterior": 300.0,
+          "consumo_ultimo_mes": 199.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 8.416667,
+          "variacao_consumo_pct": -33.666666666666664
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disco de Corte 4,5 pol",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Cabo Flexível 2,5 mm² Rolo apresentou redução de 40.00% no consumo do último mês, passando de 5.00 para 3.00.",
+        "entity": "MAT011",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 5.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -40.0
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT011",
+        "metrics": {
+          "consumo_mes_anterior": 5.0,
+          "consumo_ultimo_mes": 3.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 10.0,
+          "variacao_consumo_pct": -40.0
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Cabo Flexível 2,5 mm² Rolo",
+        "type": "REDUCAO_CONSUMO"
+      },
+      {
+        "description": "Disjuntor Tripolar 32 A apresentou redução de 33.33% no consumo do último mês, passando de 3.00 para 2.00.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Quantidade consumida no mês anterior.",
+            "metric": "consumo_mes_anterior",
+            "source": "consumo",
+            "value": 3.0
+          },
+          {
+            "description": "Quantidade consumida no último mês.",
+            "metric": "consumo_ultimo_mes",
+            "source": "consumo",
+            "value": 2.0
+          },
+          {
+            "description": "Variação percentual entre o mês anterior e o último mês.",
+            "metric": "variacao_consumo_pct",
+            "source": "consumo",
+            "value": -33.33333333333333
+          }
+        ],
+        "id": "CONSUMPTION-DROP-MAT014",
+        "metrics": {
+          "consumo_mes_anterior": 3.0,
+          "consumo_ultimo_mes": 2.0,
+          "limite_variacao_pct": -30.0,
+          "priority_score": 8.333333,
+          "variacao_consumo_pct": -33.33333333333333
+        },
+        "recommended_action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
+        "rule_origin": "rule_consumption_drop",
+        "severity": "INFO",
+        "title": "Redução relevante de consumo — Disjuntor Tripolar 32 A",
+        "type": "REDUCAO_CONSUMO"
       }
     ],
     "signals_by_severity": {
-      "ALTO": 7,
-      "ATENCAO": 3,
+      "ALTO": 8,
+      "ATENCAO": 13,
       "CRITICO": 4,
-      "INFO": 0
+      "INFO": 4
     },
-    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 14 sinais: 4 críticos, 7 altos, 3 de atenção e 0 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
-    "total_signals": 14
+    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 29 sinais: 4 críticos, 8 altos, 13 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
+    "total_signals": 29
   }
 }

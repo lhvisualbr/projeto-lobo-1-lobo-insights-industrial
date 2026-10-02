@@ -1,4 +1,4 @@
-Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 14 sinais: 4 críticos, 7 altos, 3 de atenção e 0 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.
+Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 29 sinais: 4 críticos, 8 altos, 13 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.
 
 PRINCIPAIS PRIORIDADES
 
@@ -25,13 +25,18 @@ PRINCIPAIS PRIORIDADES
 
 RECOMENDAÇÕES
 
-- MAT005 [CRITICO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição.
-- MAT007 [CRITICO]: Avaliar cobertura e planejamento de reposição. Acompanhar o estoque e avaliar necessidade de reposição.
-- MAT014 [CRITICO]: Avaliar reposição do material.
-- MAT002 [ALTO]: Avaliar cobertura e planejamento de reposição. Acompanhar o estoque e avaliar necessidade de reposição.
-- MAT008 [ALTO]: Avaliar cobertura e planejamento de reposição.
-- MAT010 [ALTO]: Avaliar reposição do material.
-- MAT015 [ALTO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição.
-- MAT017 [ALTO]: Acompanhar o estoque e avaliar necessidade de reposição.
-- MAT004 [ATENCAO]: Acompanhar o estoque e avaliar necessidade de reposição.
-- MAT013 [ATENCAO]: Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT005 [CRITICO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT007 [CRITICO]: Avaliar cobertura e planejamento de reposição. Acompanhar o estoque e avaliar necessidade de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT014 [CRITICO]: Avaliar reposição do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT002 [ALTO]: Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT008 [ALTO]: Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT010 [ALTO]: Avaliar reposição do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT015 [ALTO]: Avaliar reposição do material. Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT017 [ALTO]: Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT001 [ATENCAO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT003 [ATENCAO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT004 [ATENCAO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT006 [ATENCAO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- MAT013 [ATENCAO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Acompanhar o estoque e avaliar necessidade de reposição.
+- MAT016 [ATENCAO]: Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.
+- MAT011 [INFO]: Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
