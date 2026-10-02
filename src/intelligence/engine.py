@@ -5,6 +5,9 @@ from typing import Any
 
 import pandas as pd
 
+from intelligence.consumption_rules import (
+    evaluate_consumption_rules,
+)
 from intelligence.features import (
     FeatureContext,
     build_material_features,
@@ -345,6 +348,9 @@ def run_engine(
 
     raw_signals = (
         evaluate_inventory_rules(
+            features
+        )
+        + evaluate_consumption_rules(
             features
         )
     )

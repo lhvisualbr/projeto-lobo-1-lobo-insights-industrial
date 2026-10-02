@@ -16,6 +16,9 @@ COVERAGE_PRESSURE_WEIGHT = 25.0
 LEAD_TIME_WEIGHT = 20.0
 CRITICALITY_WEIGHT = 25.0
 
+CONSUMPTION_VARIATION_WEIGHT = 25.0
+CONSUMPTION_VARIATION_REFERENCE_PCT = 100.0
+
 NEAR_MINIMUM_RATIO = 1.25
 LEAD_TIME_REFERENCE_DAYS = 30.0
 
@@ -80,7 +83,7 @@ def _as_float(value: object) -> float | None:
     except (TypeError, ValueError):
         return None
 
-    if math.isnan(number):
+    if not math.isfinite(number):
         return None
 
     return number
@@ -187,9 +190,6 @@ def _stock_pressure_component(
         return 0.0, None
 
     if ratio < 1.0:
-        # Abaixo do mínimo:
-        # razão 1.0 = metade da pressão;
-        # razão 0.0 = pressão máxima.
         normalized = (
             0.5
             + 0.5
@@ -199,8 +199,6 @@ def _stock_pressure_component(
         )
 
     elif ratio <= NEAR_MINIMUM_RATIO:
-        # Entre o mínimo e 125% do mínimo:
-        # a pressão cai gradualmente até zero.
         normalized = (
             0.5
             * _clamp(
@@ -319,20 +317,88 @@ def _lead_time_component(
     )
 
 
+def _consumption_variation_component(
+    signal: Signal,
+) -> tuple[float, str | None]:
+    """
+    Pontua exclusivamente sinais de mudança relevante
+    no comportamento de consumo.
+
+    A magnitude absoluta da variação é normalizada contra
+    uma referência de 100%. Acima de 100%, o componente
+    permanece limitado ao peso máximo.
+
+    A direção do movimento já é representada pelo tipo
+    e pela severidade do sinal.
+    """
+
+    signal_type = _normalize_text(
+        signal.type
+    )
+
+    supported_types = {
+        "crescimento_consumo",
+        "reducao_consumo",
+    }
+
+    if signal_type not in supported_types:
+        return 0.0, None
+
+    variation = _metric(
+        signal,
+        "variacao_consumo_pct",
+    )
+
+    if variation is None:
+        return 0.0, None
+
+    magnitude = abs(
+        variation
+    )
+
+    normalized = _clamp(
+        magnitude
+        / CONSUMPTION_VARIATION_REFERENCE_PCT
+    )
+
+    score = (
+        normalized
+        * CONSUMPTION_VARIATION_WEIGHT
+    )
+
+    if score == 0:
+        return 0.0, None
+
+    return (
+        score,
+        (
+            f"Variação de consumo de "
+            f"{variation:.2f}% "
+            f"(magnitude {magnitude:.2f}%): "
+            f"+{score:.2f} pontos."
+        ),
+    )
+
+
 def score_signal(
     signal: Signal,
 ) -> PriorityScore:
     """
-    Calcula score adicional de 0 a 100.
+    Calcula score adicional de prioridade.
 
-    Componentes máximos:
-    - pressão de estoque: 30;
-    - baixa cobertura: 25;
-    - lead time: 20;
-    - criticidade: 25.
+    Para sinais de estoque, mantém os componentes históricos:
+    - pressão de estoque: até 30;
+    - baixa cobertura: até 25;
+    - lead time: até 20;
+    - criticidade: até 25.
+
+    Para sinais de comportamento de consumo, adiciona:
+    - magnitude da variação de consumo: até 25.
 
     A severidade NÃO faz parte do score porque é utilizada
     como critério primário na ordenação.
+
+    O total permanece limitado ao intervalo de 0 a 100.
     """
 
     components: dict[str, float] = {}
@@ -370,6 +436,31 @@ def score_signal(
         if explanation is not None:
             explanations.append(
                 explanation
+            )
+
+    consumption_value, consumption_explanation = (
+        _consumption_variation_component(
+            signal
+        )
+    )
+
+    if (
+        _normalize_text(signal.type)
+        in {
+            "crescimento_consumo",
+            "reducao_consumo",
+        }
+    ):
+        components[
+            "consumption_variation"
+        ] = round(
+            consumption_value,
+            6,
+        )
+
+        if consumption_explanation is not None:
+            explanations.append(
+                consumption_explanation
             )
 
     total = round(
