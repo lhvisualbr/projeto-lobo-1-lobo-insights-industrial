@@ -218,7 +218,7 @@ class TestIntelligenceReport(unittest.TestCase):
         )
 
         self.assertIn(
-            "Prioridades:",
+            "PRINCIPAIS PRIORIDADES",
             content,
         )
 

@@ -206,31 +206,94 @@ def _build_summary(
     signals: tuple[Signal, ...],
     ranked: tuple[RankedSignal, ...],
 ) -> str:
+    """
+    Gera o resumo executivo textual sem alterar
+    os cálculos ou a lógica de priorização.
+    """
+
+    def format_date_br(value: str | None) -> str | None:
+        if not value:
+            return None
+
+        try:
+            year, month, day = value.split("-")
+            return f"{day}/{month}/{year}"
+        except ValueError:
+            return value
+
+    def plural(
+        quantity: int,
+        singular: str,
+        plural_form: str,
+    ) -> str:
+        return (
+            singular
+            if quantity == 1
+            else plural_form
+        )
+
     counts = _count_signals(
         signals
     )
 
-    period = ""
-
-    if (
+    inicio = format_date_br(
         context.data_inicio
-        and context.data_fim
-    ):
+    )
+
+    fim = format_date_br(
+        context.data_fim
+    )
+
+    if inicio and fim:
         period = (
-            f" no período de "
-            f"{context.data_inicio} a "
-            f"{context.data_fim}"
+            f" entre {inicio} e {fim}"
         )
+    else:
+        period = ""
+
+    total_signals = len(
+        signals
+    )
+
+    signal_word = plural(
+        total_signals,
+        "sinal",
+        "sinais",
+    )
+
+    criticos = counts["CRITICO"]
+    altos = counts["ALTO"]
+    atencao = counts["ATENCAO"]
+    infos = counts["INFO"]
+
+    critico_text = plural(
+        criticos,
+        "crítico",
+        "críticos",
+    )
+
+    alto_text = plural(
+        altos,
+        "alto",
+        "altos",
+    )
+
+    info_text = plural(
+        infos,
+        "informativo",
+        "informativos",
+    )
 
     base = (
         f"Foram analisadas "
         f"{context.total_movimentacoes} movimentações"
         f"{period}. "
-        f"O motor identificou {len(signals)} sinal(is): "
-        f"{counts['CRITICO']} crítico(s), "
-        f"{counts['ALTO']} alto(s), "
-        f"{counts['ATENCAO']} de atenção e "
-        f"{counts['INFO']} informativo(s)."
+        f"O motor identificou "
+        f"{total_signals} {signal_word}: "
+        f"{criticos} {critico_text}, "
+        f"{altos} {alto_text}, "
+        f"{atencao} de atenção e "
+        f"{infos} {info_text}."
     )
 
     if not ranked:
@@ -247,8 +310,10 @@ def _build_summary(
         + " A maior prioridade identificada foi "
         + f"{top.signal.entity} — "
         + f"{top.signal.title}, "
-        + f"com score {top.priority.total:.2f} "
-        + f"e severidade {top.signal.severity.value}."
+        + f"com score "
+        + f"{top.priority.total:.2f} "
+        + f"e severidade "
+        + f"{top.signal.severity.value}."
     )
 
 

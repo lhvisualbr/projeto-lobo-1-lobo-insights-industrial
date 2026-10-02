@@ -11,9 +11,6 @@ from intelligence.engine import EngineResult
 def _json_safe(value: Any) -> Any:
     """
     Converte valores para uma representação JSON segura.
-
-    NaN e infinito não são emitidos como JSON inválido;
-    nesses casos o valor passa a ser None.
     """
 
     if isinstance(value, dict):
@@ -35,13 +32,104 @@ def _json_safe(value: Any) -> Any:
     return value
 
 
+def _format_number_ptbr(
+    value: object,
+    decimals: int = 2,
+) -> str:
+    """
+    Formata números no padrão pt-BR.
+    """
+
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return str(value)
+
+    formatted = f"{number:,.{decimals}f}"
+
+    return (
+        formatted
+        .replace(",", "#")
+        .replace(".", ",")
+        .replace("#", ".")
+    )
+
+
+def _format_integer_ptbr(
+    value: object,
+) -> str:
+    try:
+        number = int(float(value))
+    except (TypeError, ValueError):
+        return str(value)
+
+    return f"{number:,}".replace(",", ".")
+
+
+def _escape_markdown_table(
+    value: object,
+) -> str:
+    return (
+        str(value)
+        .replace("|", r"\|")
+        .replace("\r", " ")
+        .replace("\n", " ")
+    )
+
+
+def _group_recommendations(
+    result: EngineResult,
+) -> list[dict[str, object]]:
+    """
+    Agrupa recomendações por entidade para evitar repetição visual.
+
+    A lógica original do engine permanece intacta.
+    """
+
+    groups: dict[str, dict[str, object]] = {}
+
+    for recommendation in result.report.recommendations:
+        entity = (
+            recommendation.entity
+            or "GERAL"
+        )
+
+        if entity not in groups:
+            groups[entity] = {
+                "entity": entity,
+                "priority": recommendation.priority,
+                "actions": [],
+            }
+
+        group = groups[entity]
+
+        if (
+            recommendation.priority.rank
+            > group["priority"].rank
+        ):
+            group["priority"] = (
+                recommendation.priority
+            )
+
+        actions = group["actions"]
+
+        if recommendation.action not in actions:
+            actions.append(
+                recommendation.action
+            )
+
+    return sorted(
+        groups.values(),
+        key=lambda item: (
+            -item["priority"].rank,
+            str(item["entity"]),
+        ),
+    )
+
+
 def result_to_dict(
     result: EngineResult,
 ) -> dict[str, Any]:
-    """
-    Retorna a saída estruturada do engine pronta para serialização.
-    """
-
     return _json_safe(
         result.to_dict()
     )
@@ -52,10 +140,6 @@ def result_to_json(
     *,
     indent: int = 2,
 ) -> str:
-    """
-    Gera JSON determinístico, legível e compatível com UTF-8.
-    """
-
     return json.dumps(
         result_to_dict(result),
         ensure_ascii=False,
@@ -65,31 +149,11 @@ def result_to_json(
     )
 
 
-def _escape_markdown_table(
-    value: object,
-) -> str:
-    text = str(value)
-
-    return (
-        text
-        .replace("|", r"\|")
-        .replace("\r", " ")
-        .replace("\n", " ")
-    )
-
-
 def result_to_markdown(
     result: EngineResult,
     *,
     max_signals: int = 10,
 ) -> str:
-    """
-    Gera relatório executivo em Markdown.
-
-    A função apenas apresenta informações já produzidas
-    pelo Executive Intelligence Engine.
-    """
-
     if max_signals < 0:
         raise ValueError(
             "max_signals não pode ser negativo."
@@ -108,18 +172,58 @@ def result_to_markdown(
         "",
         "## Indicadores",
         "",
-        f"- Materiais analisados: "
-        f"{indicators.get('materiais_analisados', 0)}",
-        f"- Movimentações analisadas: "
-        f"{indicators.get('movimentacoes_analisadas', 0)}",
-        f"- Quantidade total consumida: "
-        f"{indicators.get('quantidade_total_consumida', 0)}",
-        f"- Custo total de consumo: "
-        f"{indicators.get('custo_total_consumo', 0)}",
-        f"- Total de sinais: "
-        f"{report.total_signals}",
-        f"- Materiais com sinal: "
-        f"{indicators.get('materiais_com_sinal', 0)}",
+        (
+            "- Materiais analisados: "
+            + _format_integer_ptbr(
+                indicators.get(
+                    "materiais_analisados",
+                    0,
+                )
+            )
+        ),
+        (
+            "- Movimentações analisadas: "
+            + _format_integer_ptbr(
+                indicators.get(
+                    "movimentacoes_analisadas",
+                    0,
+                )
+            )
+        ),
+        (
+            "- Quantidade total consumida: "
+            + _format_integer_ptbr(
+                indicators.get(
+                    "quantidade_total_consumida",
+                    0,
+                )
+            )
+        ),
+        (
+            "- Custo total de consumo: R$ "
+            + _format_number_ptbr(
+                indicators.get(
+                    "custo_total_consumo",
+                    0,
+                ),
+                2,
+            )
+        ),
+        (
+            "- Total de sinais: "
+            + str(
+                report.total_signals
+            )
+        ),
+        (
+            "- Materiais com sinal: "
+            + str(
+                indicators.get(
+                    "materiais_com_sinal",
+                    0,
+                )
+            )
+        ),
         "",
         "## Sinais por severidade",
         "",
@@ -161,7 +265,10 @@ def result_to_markdown(
                             item.signal.entity
                         ),
                         item.signal.severity.value,
-                        f"{item.priority.total:.2f}",
+                        _format_number_ptbr(
+                            item.priority.total,
+                            2,
+                        ),
                         _escape_markdown_table(
                             item.signal.title
                         ),
@@ -178,23 +285,25 @@ def result_to_markdown(
         ]
     )
 
-    if not report.recommendations:
+    grouped = _group_recommendations(
+        result
+    )
+
+    if not grouped:
         lines.append(
             "Nenhuma recomendação gerada pelas regras atuais."
         )
     else:
-        for recommendation in report.recommendations:
-            entity = (
-                f" [{recommendation.entity}]"
-                if recommendation.entity
-                else ""
+        for item in grouped:
+            actions = " ".join(
+                str(action)
+                for action in item["actions"]
             )
 
             lines.append(
-                f"- **{recommendation.priority.value}"
-                f"{entity}:** "
-                f"{recommendation.action} "
-                f"Motivo: {recommendation.rationale}"
+                f"- **{item['priority'].value} "
+                f"[{item['entity']}]:** "
+                f"{actions}"
             )
 
     lines.extend(
@@ -202,17 +311,25 @@ def result_to_markdown(
             "",
             "## Rastreabilidade",
             "",
-            f"- Período analisado: "
-            f"{result.context.data_inicio or 'N/D'} "
-            f"a "
-            f"{result.context.data_fim or 'N/D'}",
-            f"- Meses analisados: "
-            f"{result.context.meses_analisados}",
-            f"- Movimentações analisadas: "
-            f"{result.context.total_movimentacoes}",
+            (
+                "- Período analisado: "
+                f"{result.context.data_inicio or 'N/D'} "
+                "a "
+                f"{result.context.data_fim or 'N/D'}"
+            ),
+            (
+                "- Meses analisados: "
+                f"{result.context.meses_analisados}"
+            ),
+            (
+                "- Movimentações analisadas: "
+                f"{result.context.total_movimentacoes}"
+            ),
             "",
-            "> As recomendações são suporte à decisão. "
-            "Nenhuma ação operacional é executada automaticamente.",
+            (
+                "> As recomendações são suporte à decisão. "
+                "Nenhuma ação operacional é executada automaticamente."
+            ),
             "",
         ]
     )
@@ -225,10 +342,6 @@ def result_to_executive_text(
     *,
     max_signals: int = 5,
 ) -> str:
-    """
-    Gera versão textual curta para leitura executiva.
-    """
-
     if max_signals < 0:
         raise ValueError(
             "max_signals não pode ser negativo."
@@ -243,8 +356,13 @@ def result_to_executive_text(
     ]
 
     if ranked:
-        lines.append("")
-        lines.append("Prioridades:")
+        lines.extend(
+            [
+                "",
+                "PRINCIPAIS PRIORIDADES",
+                "",
+            ]
+        )
 
         for position, item in enumerate(
             ranked,
@@ -253,25 +371,47 @@ def result_to_executive_text(
             lines.append(
                 f"{position}. "
                 f"{item.signal.entity} — "
-                f"{item.signal.title} | "
-                f"{item.signal.severity.value} | "
-                f"score {item.priority.total:.2f}"
-            )
-
-    if result.report.recommendations:
-        lines.append("")
-        lines.append("Recomendações:")
-
-        for recommendation in result.report.recommendations:
-            entity = (
-                f"{recommendation.entity}: "
-                if recommendation.entity
-                else ""
+                f"{item.signal.title}"
             )
 
             lines.append(
-                f"- {entity}"
-                f"{recommendation.action}"
+                f"   Severidade: "
+                f"{item.signal.severity.value}"
+            )
+
+            lines.append(
+                f"   Score: "
+                f"{_format_number_ptbr(item.priority.total, 2)}"
+            )
+
+            lines.append(
+                f"   Motivo: "
+                f"{item.signal.description}"
+            )
+
+    grouped = _group_recommendations(
+        result
+    )
+
+    if grouped:
+        lines.extend(
+            [
+                "",
+                "RECOMENDAÇÕES",
+                "",
+            ]
+        )
+
+        for item in grouped:
+            actions = " ".join(
+                str(action)
+                for action in item["actions"]
+            )
+
+            lines.append(
+                f"- {item['entity']} "
+                f"[{item['priority'].value}]: "
+                f"{actions}"
             )
 
     return "\n".join(lines).strip()
@@ -283,12 +423,6 @@ def write_report_files(
     *,
     basename: str = "executive_intelligence_report",
 ) -> dict[str, Path]:
-    """
-    Grava JSON, Markdown e TXT em UTF-8.
-
-    Retorna os caminhos efetivamente criados.
-    """
-
     if not basename.strip():
         raise ValueError(
             "basename não pode ser vazio."
