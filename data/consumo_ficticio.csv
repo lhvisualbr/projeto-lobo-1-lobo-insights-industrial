@@ -1,0 +1,181 @@
+﻿Movimento_ID;Data;Material_ID;Material;Categoria;Quantidade;Unidade;Custo_Unitario;Centro_Trabalho;Tipo_Movimentacao
+MOV0001;2026-06-01;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;2;PCT;45.00;SOLDAGEM;Consumo
+MOV0002;2026-06-02;MAT020;Broca de Aço Rápido 10 mm;Ferramentas;1;UN;21.00;ELETRICA;Consumo
+MOV0003;2026-06-03;MAT018;Chave Combinada 17 mm;Ferramentas;2;UN;24.00;MANUTENCAO;Consumo
+MOV0004;2026-06-03;MAT018;Chave Combinada 17 mm;Ferramentas;1;UN;24.00;MANUTENCAO;Consumo
+MOV0005;2026-06-03;MAT001;Disco de Desbaste 7 pol;Abrasivos;10;UN;9.80;MANUTENCAO;Consumo
+MOV0006;2026-06-04;MAT003;Lixa de Ferro Grão 80;Abrasivos;1;PCT;38.00;SOLDAGEM;Consumo
+MOV0007;2026-06-04;MAT012;Fita Isolante 19 mm;Elétrica;2;PCT;42.00;ELETRICA;Consumo
+MOV0008;2026-06-04;MAT001;Disco de Desbaste 7 pol;Abrasivos;15;UN;9.80;MANUTENCAO;Consumo
+MOV0009;2026-06-04;MAT018;Chave Combinada 17 mm;Ferramentas;2;UN;24.00;MANUTENCAO;Consumo
+MOV0010;2026-06-04;MAT017;Máscara Respiratória PFF2;EPI;3;CX;72.00;FABRICACAO;Consumo
+MOV0011;2026-06-05;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;FABRICACAO;Consumo
+MOV0012;2026-06-05;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;2;PCT;45.00;MECANICA;Consumo
+MOV0013;2026-06-06;MAT001;Disco de Desbaste 7 pol;Abrasivos;6;UN;9.80;MANUTENCAO;Consumo
+MOV0014;2026-06-08;MAT015;Luva de Raspa;EPI;8;PAR;15.00;SOLDAGEM;Consumo
+MOV0015;2026-06-08;MAT012;Fita Isolante 19 mm;Elétrica;1;PCT;42.00;ELETRICA;Consumo
+MOV0016;2026-06-08;MAT016;Óculos de Proteção Incolor;EPI;8;UN;6.50;MECANICA;Consumo
+MOV0017;2026-06-09;MAT015;Luva de Raspa;EPI;4;PAR;15.00;MANUTENCAO;Consumo
+MOV0018;2026-06-09;MAT015;Luva de Raspa;EPI;8;PAR;15.00;MANUTENCAO;Consumo
+MOV0019;2026-06-09;MAT013;Terminal de Compressão 6 mm²;Elétrica;2;PCT;28.00;SOLDAGEM;Consumo
+MOV0020;2026-06-09;MAT007;Disco de Corte 7 pol;Corte;31;UN;12.50;FABRICACAO;Consumo
+MOV0021;2026-06-09;MAT013;Terminal de Compressão 6 mm²;Elétrica;3;PCT;28.00;ELETRICA;Consumo
+MOV0022;2026-06-09;MAT001;Disco de Desbaste 7 pol;Abrasivos;15;UN;9.80;SOLDAGEM;Consumo
+MOV0023;2026-06-10;MAT008;Disco de Corte 4,5 pol;Corte;32;UN;5.90;MANUTENCAO;Consumo
+MOV0024;2026-06-11;MAT009;Serra Copo 51 mm;Corte;1;UN;46.00;FABRICACAO;Consumo
+MOV0025;2026-06-11;MAT008;Disco de Corte 4,5 pol;Corte;29;UN;5.90;MANUTENCAO;Consumo
+MOV0026;2026-06-11;MAT001;Disco de Desbaste 7 pol;Abrasivos;30;UN;9.80;FABRICACAO;Consumo
+MOV0027;2026-06-12;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;2;CX;96.00;SOLDAGEM;Consumo
+MOV0028;2026-06-12;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;29;UN;7.40;MANUTENCAO;Consumo
+MOV0029;2026-06-13;MAT009;Serra Copo 51 mm;Corte;1;UN;46.00;MECANICA;Consumo
+MOV0030;2026-06-13;MAT008;Disco de Corte 4,5 pol;Corte;60;UN;5.90;SOLDAGEM;Consumo
+MOV0031;2026-06-15;MAT015;Luva de Raspa;EPI;2;PAR;15.00;SOLDAGEM;Consumo
+MOV0032;2026-06-15;MAT014;Disjuntor Tripolar 32 A;Elétrica;2;UN;118.00;MANUTENCAO;Consumo
+MOV0033;2026-06-15;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;19;UN;7.40;MANUTENCAO;Consumo
+MOV0034;2026-06-15;MAT016;Óculos de Proteção Incolor;EPI;3;UN;6.50;MANUTENCAO;Consumo
+MOV0035;2026-06-16;MAT007;Disco de Corte 7 pol;Corte;23;UN;12.50;MECANICA;Consumo
+MOV0036;2026-06-16;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;1;PCT;45.00;SOLDAGEM;Consumo
+MOV0037;2026-06-17;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;1;PCT;45.00;SOLDAGEM;Consumo
+MOV0038;2026-06-17;MAT015;Luva de Raspa;EPI;5;PAR;15.00;MECANICA;Consumo
+MOV0039;2026-06-17;MAT001;Disco de Desbaste 7 pol;Abrasivos;7;UN;9.80;SOLDAGEM;Consumo
+MOV0040;2026-06-17;MAT015;Luva de Raspa;EPI;7;PAR;15.00;FABRICACAO;Consumo
+MOV0041;2026-06-17;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;26;UN;7.40;SOLDAGEM;Consumo
+MOV0042;2026-06-17;MAT007;Disco de Corte 7 pol;Corte;8;UN;12.50;MANUTENCAO;Consumo
+MOV0043;2026-06-18;MAT007;Disco de Corte 7 pol;Corte;30;UN;12.50;MECANICA;Consumo
+MOV0044;2026-06-18;MAT008;Disco de Corte 4,5 pol;Corte;39;UN;5.90;FABRICACAO;Consumo
+MOV0045;2026-06-19;MAT006;Arame MIG 1,0 mm Bobina;Soldagem;1;UN;210.00;SOLDAGEM;Consumo
+MOV0046;2026-06-22;MAT016;Óculos de Proteção Incolor;EPI;5;UN;6.50;SOLDAGEM;Consumo
+MOV0047;2026-06-22;MAT013;Terminal de Compressão 6 mm²;Elétrica;2;PCT;28.00;MANUTENCAO;Consumo
+MOV0048;2026-06-23;MAT007;Disco de Corte 7 pol;Corte;13;UN;12.50;FABRICACAO;Consumo
+MOV0049;2026-06-23;MAT019;Trena de Aço 5 m;Ferramentas;1;UN;19.00;MANUTENCAO;Consumo
+MOV0050;2026-06-24;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;2;UN;285.00;ELETRICA;Consumo
+MOV0051;2026-06-25;MAT015;Luva de Raspa;EPI;2;PAR;15.00;ELETRICA;Consumo
+MOV0052;2026-06-25;MAT012;Fita Isolante 19 mm;Elétrica;3;PCT;42.00;ELETRICA;Consumo
+MOV0053;2026-06-25;MAT008;Disco de Corte 4,5 pol;Corte;28;UN;5.90;FABRICACAO;Consumo
+MOV0054;2026-06-26;MAT007;Disco de Corte 7 pol;Corte;5;UN;12.50;MANUTENCAO;Consumo
+MOV0055;2026-06-26;MAT006;Arame MIG 1,0 mm Bobina;Soldagem;1;UN;210.00;MANUTENCAO;Consumo
+MOV0056;2026-06-26;MAT020;Broca de Aço Rápido 10 mm;Ferramentas;1;UN;21.00;MANUTENCAO;Consumo
+MOV0057;2026-06-26;MAT015;Luva de Raspa;EPI;11;PAR;15.00;MANUTENCAO;Consumo
+MOV0058;2026-06-26;MAT001;Disco de Desbaste 7 pol;Abrasivos;14;UN;9.80;MANUTENCAO;Consumo
+MOV0059;2026-06-26;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;18;UN;7.40;SOLDAGEM;Consumo
+MOV0060;2026-06-26;MAT016;Óculos de Proteção Incolor;EPI;7;UN;6.50;MECANICA;Consumo
+MOV0061;2026-06-29;MAT006;Arame MIG 1,0 mm Bobina;Soldagem;1;UN;210.00;MANUTENCAO;Consumo
+MOV0062;2026-06-29;MAT003;Lixa de Ferro Grão 80;Abrasivos;2;PCT;38.00;FABRICACAO;Consumo
+MOV0063;2026-06-29;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;1;CX;96.00;MANUTENCAO;Consumo
+MOV0064;2026-06-30;MAT015;Luva de Raspa;EPI;2;PAR;15.00;SOLDAGEM;Consumo
+MOV0065;2026-06-30;MAT012;Fita Isolante 19 mm;Elétrica;3;PCT;42.00;ELETRICA;Consumo
+MOV0066;2026-07-01;MAT008;Disco de Corte 4,5 pol;Corte;48;UN;5.90;MECANICA;Consumo
+MOV0067;2026-07-01;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;28;UN;7.40;MECANICA;Consumo
+MOV0068;2026-07-01;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;ELETRICA;Consumo
+MOV0069;2026-07-01;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;16;UN;7.40;SOLDAGEM;Consumo
+MOV0070;2026-07-01;MAT015;Luva de Raspa;EPI;6;PAR;15.00;ELETRICA;Consumo
+MOV0071;2026-07-01;MAT008;Disco de Corte 4,5 pol;Corte;18;UN;5.90;MANUTENCAO;Consumo
+MOV0072;2026-07-02;MAT015;Luva de Raspa;EPI;9;PAR;15.00;FABRICACAO;Consumo
+MOV0073;2026-07-03;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;5;UN;7.40;FABRICACAO;Consumo
+MOV0074;2026-07-03;MAT001;Disco de Desbaste 7 pol;Abrasivos;8;UN;9.80;MECANICA;Consumo
+MOV0075;2026-07-03;MAT001;Disco de Desbaste 7 pol;Abrasivos;19;UN;9.80;MANUTENCAO;Consumo
+MOV0076;2026-07-03;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;4;CX;96.00;SOLDAGEM;Consumo
+MOV0077;2026-07-03;MAT008;Disco de Corte 4,5 pol;Corte;44;UN;5.90;FABRICACAO;Consumo
+MOV0078;2026-07-03;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;2;UN;285.00;ELETRICA;Consumo
+MOV0079;2026-07-03;MAT003;Lixa de Ferro Grão 80;Abrasivos;2;PCT;38.00;SOLDAGEM;Consumo
+MOV0080;2026-07-03;MAT001;Disco de Desbaste 7 pol;Abrasivos;8;UN;9.80;MECANICA;Consumo
+MOV0081;2026-07-04;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;MANUTENCAO;Consumo
+MOV0082;2026-07-04;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;27;UN;7.40;MECANICA;Consumo
+MOV0083;2026-07-06;MAT001;Disco de Desbaste 7 pol;Abrasivos;8;UN;9.80;MECANICA;Consumo
+MOV0084;2026-07-06;MAT007;Disco de Corte 7 pol;Corte;26;UN;12.50;MECANICA;Consumo
+MOV0085;2026-07-07;MAT020;Broca de Aço Rápido 10 mm;Ferramentas;1;UN;21.00;MECANICA;Consumo
+MOV0086;2026-07-07;MAT003;Lixa de Ferro Grão 80;Abrasivos;1;PCT;38.00;MANUTENCAO;Consumo
+MOV0087;2026-07-08;MAT020;Broca de Aço Rápido 10 mm;Ferramentas;4;UN;21.00;MANUTENCAO;Consumo
+MOV0088;2026-07-09;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;3;PCT;45.00;FABRICACAO;Consumo
+MOV0089;2026-07-09;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;2;PCT;45.00;FABRICACAO;Consumo
+MOV0090;2026-07-09;MAT007;Disco de Corte 7 pol;Corte;20;UN;12.50;MANUTENCAO;Consumo
+MOV0091;2026-07-09;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;3;PCT;45.00;SOLDAGEM;Consumo
+MOV0092;2026-07-09;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;1;CX;96.00;SOLDAGEM;Consumo
+MOV0093;2026-07-10;MAT015;Luva de Raspa;EPI;2;PAR;15.00;MECANICA;Consumo
+MOV0094;2026-07-10;MAT008;Disco de Corte 4,5 pol;Corte;15;UN;5.90;MANUTENCAO;Consumo
+MOV0095;2026-07-10;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;2;CX;96.00;MANUTENCAO;Consumo
+MOV0096;2026-07-13;MAT013;Terminal de Compressão 6 mm²;Elétrica;1;PCT;28.00;MANUTENCAO;Consumo
+MOV0097;2026-07-13;MAT015;Luva de Raspa;EPI;7;PAR;15.00;SOLDAGEM;Consumo
+MOV0098;2026-07-14;MAT003;Lixa de Ferro Grão 80;Abrasivos;3;PCT;38.00;SOLDAGEM;Consumo
+MOV0099;2026-07-15;MAT016;Óculos de Proteção Incolor;EPI;6;UN;6.50;MANUTENCAO;Consumo
+MOV0100;2026-07-15;MAT003;Lixa de Ferro Grão 80;Abrasivos;3;PCT;38.00;SOLDAGEM;Consumo
+MOV0101;2026-07-16;MAT008;Disco de Corte 4,5 pol;Corte;33;UN;5.90;FABRICACAO;Consumo
+MOV0102;2026-07-16;MAT008;Disco de Corte 4,5 pol;Corte;16;UN;5.90;SOLDAGEM;Consumo
+MOV0103;2026-07-16;MAT015;Luva de Raspa;EPI;3;PAR;15.00;MANUTENCAO;Consumo
+MOV0104;2026-07-16;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;3;CX;96.00;SOLDAGEM;Consumo
+MOV0105;2026-07-16;MAT012;Fita Isolante 19 mm;Elétrica;1;PCT;42.00;MANUTENCAO;Consumo
+MOV0106;2026-07-17;MAT014;Disjuntor Tripolar 32 A;Elétrica;1;UN;118.00;ELETRICA;Consumo
+MOV0107;2026-07-17;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;3;CX;96.00;FABRICACAO;Consumo
+MOV0108;2026-07-17;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;ELETRICA;Consumo
+MOV0109;2026-07-17;MAT013;Terminal de Compressão 6 mm²;Elétrica;2;PCT;28.00;ELETRICA;Consumo
+MOV0110;2026-07-20;MAT015;Luva de Raspa;EPI;10;PAR;15.00;FABRICACAO;Consumo
+MOV0111;2026-07-20;MAT008;Disco de Corte 4,5 pol;Corte;60;UN;5.90;MECANICA;Consumo
+MOV0112;2026-07-21;MAT017;Máscara Respiratória PFF2;EPI;2;CX;72.00;MANUTENCAO;Consumo
+MOV0113;2026-07-21;MAT014;Disjuntor Tripolar 32 A;Elétrica;2;UN;118.00;MANUTENCAO;Consumo
+MOV0114;2026-07-21;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;1;PCT;45.00;SOLDAGEM;Consumo
+MOV0115;2026-07-21;MAT008;Disco de Corte 4,5 pol;Corte;22;UN;5.90;FABRICACAO;Consumo
+MOV0116;2026-07-22;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;12;UN;7.40;MECANICA;Consumo
+MOV0117;2026-07-22;MAT009;Serra Copo 51 mm;Corte;1;UN;46.00;FABRICACAO;Consumo
+MOV0118;2026-07-22;MAT001;Disco de Desbaste 7 pol;Abrasivos;24;UN;9.80;MECANICA;Consumo
+MOV0119;2026-07-22;MAT003;Lixa de Ferro Grão 80;Abrasivos;1;PCT;38.00;SOLDAGEM;Consumo
+MOV0120;2026-07-23;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;13;UN;7.40;MECANICA;Consumo
+MOV0121;2026-07-23;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;1;CX;96.00;SOLDAGEM;Consumo
+MOV0122;2026-07-23;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;3;PCT;45.00;SOLDAGEM;Consumo
+MOV0123;2026-07-23;MAT008;Disco de Corte 4,5 pol;Corte;12;UN;5.90;SOLDAGEM;Consumo
+MOV0124;2026-07-24;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;3;CX;96.00;SOLDAGEM;Consumo
+MOV0125;2026-07-24;MAT013;Terminal de Compressão 6 mm²;Elétrica;1;PCT;28.00;ELETRICA;Consumo
+MOV0126;2026-07-24;MAT007;Disco de Corte 7 pol;Corte;34;UN;12.50;MANUTENCAO;Consumo
+MOV0127;2026-07-24;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;3;PCT;45.00;MECANICA;Consumo
+MOV0128;2026-07-25;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;2;CX;96.00;MANUTENCAO;Consumo
+MOV0129;2026-07-27;MAT008;Disco de Corte 4,5 pol;Corte;17;UN;5.90;SOLDAGEM;Consumo
+MOV0130;2026-07-28;MAT010;Lâmina de Serra Sabre;Corte;2;PCT;62.00;FABRICACAO;Consumo
+MOV0131;2026-07-29;MAT007;Disco de Corte 7 pol;Corte;7;UN;12.50;MANUTENCAO;Consumo
+MOV0132;2026-07-29;MAT013;Terminal de Compressão 6 mm²;Elétrica;1;PCT;28.00;ELETRICA;Consumo
+MOV0133;2026-07-29;MAT015;Luva de Raspa;EPI;11;PAR;15.00;MANUTENCAO;Consumo
+MOV0134;2026-07-30;MAT006;Arame MIG 1,0 mm Bobina;Soldagem;2;UN;210.00;FABRICACAO;Consumo
+MOV0135;2026-07-30;MAT013;Terminal de Compressão 6 mm²;Elétrica;1;PCT;28.00;MANUTENCAO;Consumo
+MOV0136;2026-07-31;MAT003;Lixa de Ferro Grão 80;Abrasivos;3;PCT;38.00;MANUTENCAO;Consumo
+MOV0137;2026-07-31;MAT008;Disco de Corte 4,5 pol;Corte;15;UN;5.90;MANUTENCAO;Consumo
+MOV0138;2026-07-31;MAT016;Óculos de Proteção Incolor;EPI;3;UN;6.50;FABRICACAO;Consumo
+MOV0139;2026-07-31;MAT009;Serra Copo 51 mm;Corte;1;UN;46.00;FABRICACAO;Consumo
+MOV0140;2026-07-31;MAT016;Óculos de Proteção Incolor;EPI;4;UN;6.50;FABRICACAO;Consumo
+MOV0141;2026-08-03;MAT009;Serra Copo 51 mm;Corte;2;UN;46.00;MANUTENCAO;Consumo
+MOV0142;2026-08-03;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;6;UN;7.40;MANUTENCAO;Consumo
+MOV0143;2026-08-04;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;1;PCT;45.00;SOLDAGEM;Consumo
+MOV0144;2026-08-04;MAT004;Bico de Contato MIG 1,0 mm;Soldagem;1;PCT;45.00;FABRICACAO;Consumo
+MOV0145;2026-08-05;MAT017;Máscara Respiratória PFF2;EPI;1;CX;72.00;ELETRICA;Consumo
+MOV0146;2026-08-06;MAT012;Fita Isolante 19 mm;Elétrica;1;PCT;42.00;ELETRICA;Consumo
+MOV0147;2026-08-07;MAT017;Máscara Respiratória PFF2;EPI;1;CX;72.00;MANUTENCAO;Consumo
+MOV0148;2026-08-07;MAT010;Lâmina de Serra Sabre;Corte;1;PCT;62.00;SOLDAGEM;Consumo
+MOV0149;2026-08-07;MAT008;Disco de Corte 4,5 pol;Corte;56;UN;5.90;SOLDAGEM;Consumo
+MOV0150;2026-08-10;MAT001;Disco de Desbaste 7 pol;Abrasivos;5;UN;9.80;MECANICA;Consumo
+MOV0151;2026-08-10;MAT008;Disco de Corte 4,5 pol;Corte;12;UN;5.90;FABRICACAO;Consumo
+MOV0152;2026-08-10;MAT015;Luva de Raspa;EPI;2;PAR;15.00;MECANICA;Consumo
+MOV0153;2026-08-10;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;ELETRICA;Consumo
+MOV0154;2026-08-10;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;4;CX;96.00;SOLDAGEM;Consumo
+MOV0155;2026-08-11;MAT015;Luva de Raspa;EPI;3;PAR;15.00;FABRICACAO;Consumo
+MOV0156;2026-08-11;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;7;UN;7.40;MANUTENCAO;Consumo
+MOV0157;2026-08-11;MAT016;Óculos de Proteção Incolor;EPI;10;UN;6.50;MANUTENCAO;Consumo
+MOV0158;2026-08-11;MAT016;Óculos de Proteção Incolor;EPI;2;UN;6.50;MECANICA;Consumo
+MOV0159;2026-08-11;MAT003;Lixa de Ferro Grão 80;Abrasivos;4;PCT;38.00;MANUTENCAO;Consumo
+MOV0160;2026-08-13;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;ELETRICA;Consumo
+MOV0161;2026-08-13;MAT008;Disco de Corte 4,5 pol;Corte;27;UN;5.90;MECANICA;Consumo
+MOV0162;2026-08-14;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;5;UN;7.40;MECANICA;Consumo
+MOV0163;2026-08-14;MAT003;Lixa de Ferro Grão 80;Abrasivos;1;PCT;38.00;SOLDAGEM;Consumo
+MOV0164;2026-08-14;MAT005;Eletrodo Revestido 2,5 mm;Soldagem;3;CX;96.00;MANUTENCAO;Consumo
+MOV0165;2026-08-15;MAT013;Terminal de Compressão 6 mm²;Elétrica;3;PCT;28.00;SOLDAGEM;Consumo
+MOV0166;2026-08-17;MAT007;Disco de Corte 7 pol;Corte;7;UN;12.50;FABRICACAO;Consumo
+MOV0167;2026-08-17;MAT014;Disjuntor Tripolar 32 A;Elétrica;2;UN;118.00;ELETRICA;Consumo
+MOV0168;2026-08-17;MAT017;Máscara Respiratória PFF2;EPI;2;CX;72.00;MECANICA;Consumo
+MOV0169;2026-08-17;MAT016;Óculos de Proteção Incolor;EPI;7;UN;6.50;MECANICA;Consumo
+MOV0170;2026-08-19;MAT007;Disco de Corte 7 pol;Corte;13;UN;12.50;SOLDAGEM;Consumo
+MOV0171;2026-08-19;MAT007;Disco de Corte 7 pol;Corte;15;UN;12.50;FABRICACAO;Consumo
+MOV0172;2026-08-20;MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;17;UN;7.40;FABRICACAO;Consumo
+MOV0173;2026-08-21;MAT020;Broca de Aço Rápido 10 mm;Ferramentas;4;UN;21.00;MANUTENCAO;Consumo
+MOV0174;2026-08-27;MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;1;UN;285.00;ELETRICA;Consumo
+MOV0175;2026-08-27;MAT008;Disco de Corte 4,5 pol;Corte;30;UN;5.90;FABRICACAO;Consumo
+MOV0176;2026-08-27;MAT017;Máscara Respiratória PFF2;EPI;3;CX;72.00;SOLDAGEM;Consumo
+MOV0177;2026-08-28;MAT003;Lixa de Ferro Grão 80;Abrasivos;1;PCT;38.00;MANUTENCAO;Consumo
+MOV0178;2026-08-28;MAT008;Disco de Corte 4,5 pol;Corte;57;UN;5.90;SOLDAGEM;Consumo
+MOV0179;2026-08-31;MAT008;Disco de Corte 4,5 pol;Corte;17;UN;5.90;MECANICA;Consumo
+MOV0180;2026-08-31;MAT007;Disco de Corte 7 pol;Corte;12;UN;12.50;MECANICA;Consumo

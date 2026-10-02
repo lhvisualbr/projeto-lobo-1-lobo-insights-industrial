@@ -1,0 +1,21 @@
+﻿Material_ID;Material;Categoria;Unidade;Custo_Unitario;Criticidade;Fornecedor
+MAT001;Disco de Desbaste 7 pol;Abrasivos;UN;9.80;Média;Fornecedor Beta
+MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;UN;7.40;Baixa;Fornecedor Beta
+MAT003;Lixa de Ferro Grão 80;Abrasivos;PCT;38.00;Baixa;Fornecedor Gama
+MAT004;Bico de Contato MIG 1,0 mm;Soldagem;PCT;45.00;Média;Fornecedor Delta
+MAT005;Eletrodo Revestido 2,5 mm;Soldagem;CX;96.00;Alta;Fornecedor Alfa
+MAT006;Arame MIG 1,0 mm Bobina;Soldagem;UN;210.00;Alta;Fornecedor Delta
+MAT007;Disco de Corte 7 pol;Corte;UN;12.50;Alta;Fornecedor Alfa
+MAT008;Disco de Corte 4,5 pol;Corte;UN;5.90;Média;Fornecedor Alfa
+MAT009;Serra Copo 51 mm;Corte;UN;46.00;Baixa;Fornecedor Sigma
+MAT010;Lâmina de Serra Sabre;Corte;PCT;62.00;Média;Fornecedor Sigma
+MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;UN;285.00;Média;Fornecedor Beta
+MAT012;Fita Isolante 19 mm;Elétrica;PCT;42.00;Baixa;Fornecedor Gama
+MAT013;Terminal de Compressão 6 mm²;Elétrica;PCT;28.00;Média;Fornecedor Delta
+MAT014;Disjuntor Tripolar 32 A;Elétrica;UN;118.00;Alta;Fornecedor Delta
+MAT015;Luva de Raspa;EPI;PAR;15.00;Média;Fornecedor Sigma
+MAT016;Óculos de Proteção Incolor;EPI;UN;6.50;Média;Fornecedor Sigma
+MAT017;Máscara Respiratória PFF2;EPI;CX;72.00;Alta;Fornecedor Sigma
+MAT018;Chave Combinada 17 mm;Ferramentas;UN;24.00;Baixa;Fornecedor Gama
+MAT019;Trena de Aço 5 m;Ferramentas;UN;19.00;Baixa;Fornecedor Beta
+MAT020;Broca de Aço Rápido 10 mm;Ferramentas;UN;21.00;Média;Fornecedor Alfa

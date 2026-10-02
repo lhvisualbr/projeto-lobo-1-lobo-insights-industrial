@@ -1,0 +1,10 @@
+# Bibliotecas Python. Versões com que a V0.1.1 foi testada (Linux x86_64, Python 3.12.3).
+# Outras versões não foram verificadas. O pandas 3.x exige Python 3.11 ou superior.
+pandas==3.0.2
+openpyxl==3.1.5
+lxml==6.0.2
+
+# Ferramenta externa (NÃO é pacote pip): LibreOffice 24.2 ou superior.
+# Necessário apenas para reconstruir o XLSX (scripts/construir_excel.py) e para os testes de Excel
+# que recalculam fórmulas. Deixe o comando `soffice` no PATH ou defina a variável de ambiente
+# LOBO_SOFFICE com o caminho do executável. Sem LibreOffice, os testes correspondentes ficam SKIP.

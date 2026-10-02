@@ -1,0 +1,21 @@
+﻿Material_ID;Material;Categoria;Unidade;Estoque_Atual;Estoque_Minimo;Custo_Unitario;Lead_Time_Dias;Fornecedor;Criticidade
+MAT001;Disco de Desbaste 7 pol;Abrasivos;UN;120;40;9.80;7;Fornecedor Beta;Média
+MAT002;Disco Flap 4,5 pol Grão 60;Abrasivos;UN;30;30;7.40;7;Fornecedor Beta;Baixa
+MAT003;Lixa de Ferro Grão 80;Abrasivos;PCT;34;10;38.00;10;Fornecedor Gama;Baixa
+MAT004;Bico de Contato MIG 1,0 mm;Soldagem;PCT;9;8;45.00;14;Fornecedor Delta;Média
+MAT005;Eletrodo Revestido 2,5 mm;Soldagem;CX;7;12;96.00;12;Fornecedor Alfa;Alta
+MAT006;Arame MIG 1,0 mm Bobina;Soldagem;UN;14;6;210.00;21;Fornecedor Delta;Alta
+MAT007;Disco de Corte 7 pol;Corte;UN;74;60;12.50;7;Fornecedor Alfa;Alta
+MAT008;Disco de Corte 4,5 pol;Corte;UN;210;80;5.90;7;Fornecedor Alfa;Média
+MAT009;Serra Copo 51 mm;Corte;UN;12;4;46.00;15;Fornecedor Sigma;Baixa
+MAT010;Lâmina de Serra Sabre;Corte;PCT;5;6;62.00;18;Fornecedor Sigma;Média
+MAT011;Cabo Flexível 2,5 mm² Rolo;Elétrica;UN;8;3;285.00;20;Fornecedor Beta;Média
+MAT012;Fita Isolante 19 mm;Elétrica;PCT;25;10;42.00;10;Fornecedor Gama;Baixa
+MAT013;Terminal de Compressão 6 mm²;Elétrica;PCT;14;12;28.00;14;Fornecedor Delta;Média
+MAT014;Disjuntor Tripolar 32 A;Elétrica;UN;3;4;118.00;21;Fornecedor Delta;Alta
+MAT015;Luva de Raspa;EPI;PAR;22;30;15.00;9;Fornecedor Sigma;Média
+MAT016;Óculos de Proteção Incolor;EPI;UN;90;40;6.50;5;Fornecedor Sigma;Média
+MAT017;Máscara Respiratória PFF2;EPI;CX;11;10;72.00;12;Fornecedor Sigma;Alta
+MAT018;Chave Combinada 17 mm;Ferramentas;UN;12;4;24.00;10;Fornecedor Gama;Baixa
+MAT019;Trena de Aço 5 m;Ferramentas;UN;9;3;19.00;8;Fornecedor Beta;Baixa
+MAT020;Broca de Aço Rápido 10 mm;Ferramentas;UN;26;10;21.00;12;Fornecedor Alfa;Média

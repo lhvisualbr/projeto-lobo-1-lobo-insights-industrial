@@ -1,0 +1,3 @@
+- Na V0.1.1 o XLSX é **byte a byte idêntico** ao da V0.1 (mesmo SHA-256, conferido no teste de regressão). Por isso a inspeção visual da V0.1, registrada em `docs/TEST_REPORT_V0_1.md` (seção 7), continua descrevendo este mesmo arquivo, **com as mesmas ressalvas** ali declaradas.
+- **Nenhuma nova inspeção visual foi feita na V0.1.1**: não havia mudança no arquivo a inspecionar.
+- Continuam **não realizadas**: inspeção das páginas 5 a 7 (continuação da tabela Consumo) e inspeção no Microsoft Excel real.

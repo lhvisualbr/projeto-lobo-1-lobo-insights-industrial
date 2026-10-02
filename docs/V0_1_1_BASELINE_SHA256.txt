@@ -1,0 +1,27 @@
+# Base congelada V0.1.1 — hashes SHA-256 dos arquivos que a V0.2 NÃO pode alterar
+# Origem: Lobo_Insights_Industrial_V0_1_1.zip (SHA-256 97f4dc11fb16cbc6c18259af8556604c7d31b296c0c34e771dfb780850c6fcc4); valores copiados do SHA256SUMS.txt da V0.1.1.
+# Formato: <sha256>  <caminho na V0.1.1>. O teste de regressão compara com os arquivos atuais; docs/TEST_REPORT.md da V0.1.1 está preservado como docs/TEST_REPORT_V0_1_1.md.
+# Atualizados de propósito na V0.2 (por isso ausentes desta lista): README.md, CHANGELOG.md, docs/LIMITATIONS.md e SHA256SUMS.txt.
+b5b8249731e5fcbce34b4345b4d1e576c568b33de3eba4dfca91f8bd0d94233c  data/consumo_ficticio.csv
+9f90cd52f208f9f863b2ababf7fed4735bbe893ef137efdc79f7506b3359a8d0  data/estoque_ficticio.csv
+eca98597dc740956b4db95885ec54693def431a56501ea6d055fa54c1654231b  data/materiais_ficticios.csv
+bf96c5d34543f6bd97ef75fbb3309b26d636456bd66d4be9b6c54b008cd7c7cb  docs/DATA_DICTIONARY.md
+cfe7caa800662bb1c3f832320cdf82cf1636bbf765e294c79249ab7661e1ed6d  docs/TEST_REPORT.md
+e22ac11e268e01cfd7df994bded245e4fe148aea6bce6d57b1dd4060a43f5559  docs/TEST_REPORT_V0_1.md
+b1dd036e91e08d9144e89a65bbc9ab9f6f400f78a60af3e6a8c1c2de55cd5e83  docs/V0_1_1_NOTES.md
+2e8d57adaa5b98195bba6e6f06b121a7cea906553eead21767ca6ea7ba92dfb2  docs/V0_1_BASELINE_SHA256.txt
+c1f45378a5d000ed331c23d19d7c9e354716d44d5fd0ee20c808fe676a60615f  docs/V0_1_NOTES.md
+af72925bf484ab6119ce203ba35ea3e97108e42bdce7201db518e812788486b7  docs/manual/inspecao_visual.md
+646eb60eaf7dd08e647021530eaf671a3e5923fc8b8f05685fcb15777b306d0d  docs/manual/observacoes_execucao.md
+cfdd4c65e4e53537fc4ff948d2651cb9ac1cfaeba3798e1919291d15e2068964  excel/lobo_insights_industrial_v0_1.xlsx
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  images/.gitkeep
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  metrics/.gitkeep
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  n8n/.gitkeep
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  powerbi/.gitkeep
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  prompts/.gitkeep
+e83f580e186871dcd9997212dc1b4efb0b63bec812ee00656d9ad68004d7879f  requirements.txt
+aa02be2f3e53e6f3a6cc826c750787ee2e7f6d4f93ae1d6480977006e30ecdb0  scripts/construir_excel.py
+f4bfd733cf271a99f38e734a07786805c3ddf0a4fa1a402b080a77434bfa71e7  scripts/executar_testes.py
+ac3234cbded3d7d74abda3bc6daf0158163bbe5adbe86a4ceba42dff691d6bfa  scripts/gerar_dados.py
+5413c35d761018124fd6933c17b20c333429158c21c5d1ce96203f948c938d4b  scripts/lobo_common.py
+0c250845a90526e02892c821729f1cf81e97465de701c7899ac1193974328507  scripts/validar_dados.py
