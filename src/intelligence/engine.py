@@ -15,6 +15,9 @@ from intelligence.features import (
     FeatureContext,
     build_material_features,
 )
+from intelligence.lead_time_rules import (
+    evaluate_lead_time_rules,
+)
 from intelligence.models import (
     ExecutiveReport,
     Recommendation,
@@ -359,6 +362,9 @@ def run_engine(
             features
         )
         + evaluate_cost_rules(
+            features
+        )
+        + evaluate_lead_time_rules(
             features
         )
     )
