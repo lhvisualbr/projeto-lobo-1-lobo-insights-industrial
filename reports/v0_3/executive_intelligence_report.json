@@ -211,6 +211,60 @@
     {
       "priority": {
         "components": {
+          "consumption_share": 20.0,
+          "cost_share": 20.590847,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 16.47%: +20.59 pontos.",
+          "Participação no volume consumido de 41.71%: +20.00 pontos."
+        ],
+        "total": 40.590847
+      },
+      "signal": {
+        "description": "Disco de Corte 4,5 pol concentra 16.47% do custo total e 41.71% da quantidade consumida.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 4053.3
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 16.47267761783616
+          },
+          {
+            "description": "Participação percentual do material na quantidade total consumida.",
+            "metric": "participacao_consumo_pct",
+            "source": "consumo",
+            "value": 41.712204007285976
+          }
+        ],
+        "id": "COST-CONSUMPTION-IMPACT-MAT008",
+        "metrics": {
+          "custo_consumo": 4053.3,
+          "limite_consumo_pct": 10.0,
+          "limite_custo_pct": 10.0,
+          "participacao_consumo_pct": 41.712204007285976,
+          "participacao_custo_pct": 16.47267761783616
+        },
+        "recommended_action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "rule_origin": "rule_high_cost_and_consumption_impact",
+        "severity": "ALTO",
+        "title": "Alto impacto de custo e consumo — Disco de Corte 4,5 pol",
+        "type": "ALTO_IMPACTO_CUSTO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 0.0,
           "criticality": 12.5,
           "lead_time": 0.0,
@@ -256,6 +310,60 @@
         "severity": "ALTO",
         "title": "Estoque abaixo do mínimo — Luva de Raspa",
         "type": "ESTOQUE_ABAIXO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "consumption_share": 14.814815,
+          "cost_share": 15.494062,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 12.40%: +15.49 pontos.",
+          "Participação no volume consumido de 14.81%: +14.81 pontos."
+        ],
+        "total": 30.308877
+      },
+      "signal": {
+        "description": "Disco de Corte 7 pol concentra 12.40% do custo total e 14.81% da quantidade consumida.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3050.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.39524997764791
+          },
+          {
+            "description": "Participação percentual do material na quantidade total consumida.",
+            "metric": "participacao_consumo_pct",
+            "source": "consumo",
+            "value": 14.814814814814813
+          }
+        ],
+        "id": "COST-CONSUMPTION-IMPACT-MAT007",
+        "metrics": {
+          "custo_consumo": 3050.0,
+          "limite_consumo_pct": 10.0,
+          "limite_custo_pct": 10.0,
+          "participacao_consumo_pct": 14.814814814814813,
+          "participacao_custo_pct": 12.39524997764791
+        },
+        "recommended_action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "rule_origin": "rule_high_cost_and_consumption_impact",
+        "severity": "ALTO",
+        "title": "Alto impacto de custo e consumo — Disco de Corte 7 pol",
+        "type": "ALTO_IMPACTO_CUSTO_CONSUMO"
       }
     },
     {
@@ -357,6 +465,51 @@
         "severity": "ALTO",
         "title": "Crescimento relevante de consumo — Máscara Respiratória PFF2",
         "type": "CRESCIMENTO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "cost_share": 20.590847,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 16.47%: +20.59 pontos."
+        ],
+        "total": 20.590847
+      },
+      "signal": {
+        "description": "Disco de Corte 4,5 pol representa 16.47% do custo total de consumo no período analisado.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 4053.3
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 16.47267761783616
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT008",
+        "metrics": {
+          "custo_consumo": 4053.3,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 16.47267761783616
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ALTO",
+        "title": "Concentração relevante de custo — Disco de Corte 4,5 pol",
+        "type": "CONCENTRACAO_CUSTO"
       }
     },
     {
@@ -865,6 +1018,51 @@
     {
       "priority": {
         "components": {
+          "cost_share": 15.925864,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 12.74%: +15.93 pontos."
+        ],
+        "total": 15.925864
+      },
+      "signal": {
+        "description": "Cabo Flexível 2,5 mm² Rolo representa 12.74% do custo total de consumo no período analisado.",
+        "entity": "MAT011",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3135.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.740691370467609
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT011",
+        "metrics": {
+          "custo_consumo": 3135.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 12.740691370467609
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Cabo Flexível 2,5 mm² Rolo",
+        "type": "CONCENTRACAO_CUSTO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "consumption_variation": 15.789474,
           "coverage_pressure": 0.0,
           "criticality": 0.0,
@@ -916,6 +1114,51 @@
     {
       "priority": {
         "components": {
+          "cost_share": 15.494062,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 12.40%: +15.49 pontos."
+        ],
+        "total": 15.494062
+      },
+      "signal": {
+        "description": "Disco de Corte 7 pol representa 12.40% do custo total de consumo no período analisado.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3050.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.39524997764791
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT007",
+        "metrics": {
+          "custo_consumo": 3050.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 12.39524997764791
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Disco de Corte 7 pol",
+        "type": "CONCENTRACAO_CUSTO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 0.0,
           "criticality": 0.0,
           "lead_time": 0.0,
@@ -960,6 +1203,51 @@
         "severity": "ATENCAO",
         "title": "Estoque próximo do mínimo — Disco Flap 4,5 pol Grão 60",
         "type": "ESTOQUE_PROXIMO_MINIMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "cost_share": 14.142777,
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Participação no custo total de 11.31%: +14.14 pontos."
+        ],
+        "total": 14.142777
+      },
+      "signal": {
+        "description": "Eletrodo Revestido 2,5 mm representa 11.31% do custo total de consumo no período analisado.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 2784.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 11.31422161894157
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT005",
+        "metrics": {
+          "custo_consumo": 2784.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 11.31422161894157
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Eletrodo Revestido 2,5 mm",
+        "type": "CONCENTRACAO_CUSTO"
       }
     },
     {
@@ -1477,11 +1765,11 @@
       "materiais_com_sinal": 15,
       "movimentacoes_analisadas": 180,
       "quantidade_total_consumida": 1647.0,
-      "sinais_alto": 8,
-      "sinais_atencao": 13,
+      "sinais_alto": 11,
+      "sinais_atencao": 16,
       "sinais_critico": 4,
       "sinais_info": 4,
-      "total_sinais": 29
+      "total_sinais": 35
     },
     "recommendations": [
       {
@@ -1509,10 +1797,22 @@
         "rationale": "Disco de Corte 7 pol possui cobertura estimada de 0.91 mês(es), abaixo do limite de 1.00."
       },
       {
+        "action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "entity": "MAT008",
+        "priority": "ALTO",
+        "rationale": "Disco de Corte 4,5 pol concentra 16.47% do custo total e 41.71% da quantidade consumida."
+      },
+      {
         "action": "Avaliar reposição do material.",
         "entity": "MAT015",
         "priority": "ALTO",
         "rationale": "Luva de Raspa possui estoque atual de 22, abaixo do mínimo de 30."
+      },
+      {
+        "action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "entity": "MAT007",
+        "priority": "ALTO",
+        "rationale": "Disco de Corte 7 pol concentra 12.40% do custo total e 14.81% da quantidade consumida."
       },
       {
         "action": "Avaliar reposição do material.",
@@ -1525,6 +1825,12 @@
         "entity": "MAT017",
         "priority": "ALTO",
         "rationale": "Máscara Respiratória PFF2 apresentou crescimento de 250.00% no consumo do último mês, passando de 2.00 para 7.00."
+      },
+      {
+        "action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "entity": "MAT008",
+        "priority": "ALTO",
+        "rationale": "Disco de Corte 4,5 pol representa 16.47% do custo total de consumo no período analisado."
       },
       {
         "action": "Avaliar cobertura e planejamento de reposição.",
@@ -1587,16 +1893,34 @@
         "rationale": "Disco Flap 4,5 pol Grão 60 apresentou redução de 65.35% no consumo do último mês, passando de 101.00 para 35.00."
       },
       {
+        "action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "entity": "MAT011",
+        "priority": "ATENCAO",
+        "rationale": "Cabo Flexível 2,5 mm² Rolo representa 12.74% do custo total de consumo no período analisado."
+      },
+      {
         "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
         "entity": "MAT005",
         "priority": "ATENCAO",
         "rationale": "Eletrodo Revestido 2,5 mm apresentou redução de 63.16% no consumo do último mês, passando de 19.00 para 7.00."
       },
       {
+        "action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "entity": "MAT007",
+        "priority": "ATENCAO",
+        "rationale": "Disco de Corte 7 pol representa 12.40% do custo total de consumo no período analisado."
+      },
+      {
         "action": "Acompanhar o estoque e avaliar necessidade de reposição.",
         "entity": "MAT002",
         "priority": "ATENCAO",
         "rationale": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00."
+      },
+      {
+        "action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "entity": "MAT005",
+        "priority": "ATENCAO",
+        "rationale": "Eletrodo Revestido 2,5 mm representa 11.31% do custo total de consumo no período analisado."
       },
       {
         "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
@@ -1840,6 +2164,113 @@
         "severity": "ALTO",
         "title": "Crescimento relevante de consumo — Máscara Respiratória PFF2",
         "type": "CRESCIMENTO_CONSUMO"
+      },
+      {
+        "description": "Disco de Corte 4,5 pol representa 16.47% do custo total de consumo no período analisado.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 4053.3
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 16.47267761783616
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT008",
+        "metrics": {
+          "custo_consumo": 4053.3,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 16.47267761783616,
+          "priority_score": 20.590847
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ALTO",
+        "title": "Concentração relevante de custo — Disco de Corte 4,5 pol",
+        "type": "CONCENTRACAO_CUSTO"
+      },
+      {
+        "description": "Disco de Corte 7 pol concentra 12.40% do custo total e 14.81% da quantidade consumida.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3050.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.39524997764791
+          },
+          {
+            "description": "Participação percentual do material na quantidade total consumida.",
+            "metric": "participacao_consumo_pct",
+            "source": "consumo",
+            "value": 14.814814814814813
+          }
+        ],
+        "id": "COST-CONSUMPTION-IMPACT-MAT007",
+        "metrics": {
+          "custo_consumo": 3050.0,
+          "limite_consumo_pct": 10.0,
+          "limite_custo_pct": 10.0,
+          "participacao_consumo_pct": 14.814814814814813,
+          "participacao_custo_pct": 12.39524997764791,
+          "priority_score": 30.308877
+        },
+        "recommended_action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "rule_origin": "rule_high_cost_and_consumption_impact",
+        "severity": "ALTO",
+        "title": "Alto impacto de custo e consumo — Disco de Corte 7 pol",
+        "type": "ALTO_IMPACTO_CUSTO_CONSUMO"
+      },
+      {
+        "description": "Disco de Corte 4,5 pol concentra 16.47% do custo total e 41.71% da quantidade consumida.",
+        "entity": "MAT008",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 4053.3
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 16.47267761783616
+          },
+          {
+            "description": "Participação percentual do material na quantidade total consumida.",
+            "metric": "participacao_consumo_pct",
+            "source": "consumo",
+            "value": 41.712204007285976
+          }
+        ],
+        "id": "COST-CONSUMPTION-IMPACT-MAT008",
+        "metrics": {
+          "custo_consumo": 4053.3,
+          "limite_consumo_pct": 10.0,
+          "limite_custo_pct": 10.0,
+          "participacao_consumo_pct": 41.712204007285976,
+          "participacao_custo_pct": 16.47267761783616,
+          "priority_score": 40.590847
+        },
+        "recommended_action": "Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional.",
+        "rule_origin": "rule_high_cost_and_consumption_impact",
+        "severity": "ALTO",
+        "title": "Alto impacto de custo e consumo — Disco de Corte 4,5 pol",
+        "type": "ALTO_IMPACTO_CUSTO_CONSUMO"
       },
       {
         "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 0.39 mês(es), abaixo do limite de 1.00.",
@@ -2464,6 +2895,99 @@
         "type": "CRESCIMENTO_CONSUMO"
       },
       {
+        "description": "Eletrodo Revestido 2,5 mm representa 11.31% do custo total de consumo no período analisado.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 2784.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 11.31422161894157
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT005",
+        "metrics": {
+          "custo_consumo": 2784.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 11.31422161894157,
+          "priority_score": 14.142777
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Eletrodo Revestido 2,5 mm",
+        "type": "CONCENTRACAO_CUSTO"
+      },
+      {
+        "description": "Disco de Corte 7 pol representa 12.40% do custo total de consumo no período analisado.",
+        "entity": "MAT007",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3050.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.39524997764791
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT007",
+        "metrics": {
+          "custo_consumo": 3050.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 12.39524997764791,
+          "priority_score": 15.494062
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Disco de Corte 7 pol",
+        "type": "CONCENTRACAO_CUSTO"
+      },
+      {
+        "description": "Cabo Flexível 2,5 mm² Rolo representa 12.74% do custo total de consumo no período analisado.",
+        "entity": "MAT011",
+        "evidences": [
+          {
+            "description": "Custo total estimado de consumo do material no período analisado.",
+            "metric": "custo_consumo",
+            "source": "consumo",
+            "value": 3135.0
+          },
+          {
+            "description": "Participação percentual do material no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "consumo",
+            "value": 12.740691370467609
+          }
+        ],
+        "id": "COST-CONCENTRATION-MAT011",
+        "metrics": {
+          "custo_consumo": 3135.0,
+          "limite_alto_pct": 15.0,
+          "limite_concentracao_pct": 10.0,
+          "participacao_custo_pct": 12.740691370467609,
+          "priority_score": 15.925864
+        },
+        "recommended_action": "Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.",
+        "rule_origin": "rule_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração relevante de custo — Cabo Flexível 2,5 mm² Rolo",
+        "type": "CONCENTRACAO_CUSTO"
+      },
+      {
         "description": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00.",
         "entity": "MAT002",
         "evidences": [
@@ -2721,12 +3245,12 @@
       }
     ],
     "signals_by_severity": {
-      "ALTO": 8,
-      "ATENCAO": 13,
+      "ALTO": 11,
+      "ATENCAO": 16,
       "CRITICO": 4,
       "INFO": 4
     },
-    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 29 sinais: 4 críticos, 8 altos, 13 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
-    "total_signals": 29
+    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 35 sinais: 4 críticos, 11 altos, 16 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
+    "total_signals": 35
   }
 }
