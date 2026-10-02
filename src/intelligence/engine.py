@@ -8,6 +8,9 @@ import pandas as pd
 from intelligence.consumption_rules import (
     evaluate_consumption_rules,
 )
+from intelligence.cost_rules import (
+    evaluate_cost_rules,
+)
 from intelligence.features import (
     FeatureContext,
     build_material_features,
@@ -214,7 +217,9 @@ def _build_summary(
     os cálculos ou a lógica de priorização.
     """
 
-    def format_date_br(value: str | None) -> str | None:
+    def format_date_br(
+        value: str | None,
+    ) -> str | None:
         if not value:
             return None
 
@@ -351,6 +356,9 @@ def run_engine(
             features
         )
         + evaluate_consumption_rules(
+            features
+        )
+        + evaluate_cost_rules(
             features
         )
     )

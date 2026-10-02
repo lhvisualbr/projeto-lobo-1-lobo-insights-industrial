@@ -19,6 +19,12 @@ CRITICALITY_WEIGHT = 25.0
 CONSUMPTION_VARIATION_WEIGHT = 25.0
 CONSUMPTION_VARIATION_REFERENCE_PCT = 100.0
 
+COST_SHARE_WEIGHT = 25.0
+COST_SHARE_REFERENCE_PCT = 20.0
+
+COST_CONSUMPTION_SHARE_WEIGHT = 20.0
+COST_CONSUMPTION_SHARE_REFERENCE_PCT = 20.0
+
 NEAR_MINIMUM_RATIO = 1.25
 LEAD_TIME_REFERENCE_DAYS = 30.0
 
@@ -320,18 +326,6 @@ def _lead_time_component(
 def _consumption_variation_component(
     signal: Signal,
 ) -> tuple[float, str | None]:
-    """
-    Pontua exclusivamente sinais de mudança relevante
-    no comportamento de consumo.
-
-    A magnitude absoluta da variação é normalizada contra
-    uma referência de 100%. Acima de 100%, o componente
-    permanece limitado ao peso máximo.
-
-    A direção do movimento já é representada pelo tipo
-    e pela severidade do sinal.
-    """
-
     signal_type = _normalize_text(
         signal.type
     )
@@ -380,25 +374,133 @@ def _consumption_variation_component(
     )
 
 
+def _cost_share_component(
+    signal: Signal,
+) -> tuple[float, str | None]:
+    """
+    Pontua a concentração financeira individual
+    de sinais do domínio de custos.
+    """
+
+    signal_type = _normalize_text(
+        signal.type
+    )
+
+    supported_types = {
+        "concentracao_custo",
+        "alto_impacto_custo_consumo",
+    }
+
+    if signal_type not in supported_types:
+        return 0.0, None
+
+    cost_share = _metric(
+        signal,
+        "participacao_custo_pct",
+    )
+
+    if cost_share is None:
+        return 0.0, None
+
+    if cost_share <= 0:
+        return 0.0, None
+
+    normalized = _clamp(
+        cost_share
+        / COST_SHARE_REFERENCE_PCT
+    )
+
+    score = (
+        normalized
+        * COST_SHARE_WEIGHT
+    )
+
+    if score == 0:
+        return 0.0, None
+
+    return (
+        score,
+        (
+            f"Participação no custo total de "
+            f"{cost_share:.2f}%: "
+            f"+{score:.2f} pontos."
+        ),
+    )
+
+
+def _cost_consumption_share_component(
+    signal: Signal,
+) -> tuple[float, str | None]:
+    """
+    Acrescenta pressão de volume somente ao sinal
+    combinado de alto impacto de custo e consumo.
+    """
+
+    signal_type = _normalize_text(
+        signal.type
+    )
+
+    if signal_type != "alto_impacto_custo_consumo":
+        return 0.0, None
+
+    consumption_share = _metric(
+        signal,
+        "participacao_consumo_pct",
+    )
+
+    if consumption_share is None:
+        return 0.0, None
+
+    if consumption_share <= 0:
+        return 0.0, None
+
+    normalized = _clamp(
+        consumption_share
+        / COST_CONSUMPTION_SHARE_REFERENCE_PCT
+    )
+
+    score = (
+        normalized
+        * COST_CONSUMPTION_SHARE_WEIGHT
+    )
+
+    if score == 0:
+        return 0.0, None
+
+    return (
+        score,
+        (
+            f"Participação no volume consumido de "
+            f"{consumption_share:.2f}%: "
+            f"+{score:.2f} pontos."
+        ),
+    )
+
+
 def score_signal(
     signal: Signal,
 ) -> PriorityScore:
     """
     Calcula score adicional de prioridade.
 
-    Para sinais de estoque, mantém os componentes históricos:
+    Estoque:
     - pressão de estoque: até 30;
     - baixa cobertura: até 25;
     - lead time: até 20;
     - criticidade: até 25.
 
-    Para sinais de comportamento de consumo, adiciona:
-    - magnitude da variação de consumo: até 25.
+    Comportamento de consumo:
+    - magnitude da variação: até 25.
 
-    A severidade NÃO faz parte do score porque é utilizada
-    como critério primário na ordenação.
+    Custos:
+    - participação no custo total: até 25;
+    - participação no volume, para sinal combinado:
+      até 20.
 
-    O total permanece limitado ao intervalo de 0 a 100.
+    A severidade NÃO faz parte do score porque permanece
+    como critério primário da ordenação.
+
+    O total final permanece limitado entre 0 e 100.
     """
 
     components: dict[str, float] = {}
@@ -438,29 +540,71 @@ def score_signal(
                 explanation
             )
 
-    consumption_value, consumption_explanation = (
-        _consumption_variation_component(
-            signal
-        )
+    signal_type = _normalize_text(
+        signal.type
     )
 
-    if (
-        _normalize_text(signal.type)
-        in {
-            "crescimento_consumo",
-            "reducao_consumo",
-        }
-    ):
+    if signal_type in {
+        "crescimento_consumo",
+        "reducao_consumo",
+    }:
+        value, explanation = (
+            _consumption_variation_component(
+                signal
+            )
+        )
+
         components[
             "consumption_variation"
         ] = round(
-            consumption_value,
+            value,
             6,
         )
 
-        if consumption_explanation is not None:
+        if explanation is not None:
             explanations.append(
-                consumption_explanation
+                explanation
+            )
+
+    if signal_type in {
+        "concentracao_custo",
+        "alto_impacto_custo_consumo",
+    }:
+        value, explanation = (
+            _cost_share_component(
+                signal
+            )
+        )
+
+        components[
+            "cost_share"
+        ] = round(
+            value,
+            6,
+        )
+
+        if explanation is not None:
+            explanations.append(
+                explanation
+            )
+
+    if signal_type == "alto_impacto_custo_consumo":
+        value, explanation = (
+            _cost_consumption_share_component(
+                signal
+            )
+        )
+
+        components[
+            "consumption_share"
+        ] = round(
+            value,
+            6,
+        )
+
+        if explanation is not None:
+            explanations.append(
+                explanation
             )
 
     total = round(
