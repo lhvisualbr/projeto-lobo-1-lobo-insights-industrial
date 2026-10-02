@@ -265,6 +265,119 @@
     {
       "priority": {
         "components": {
+          "coverage_pressure": 6.896552,
+          "criticality": 25.0,
+          "lead_time": 8.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.724 mês(es): +6.90 pontos.",
+          "Lead time de 12 dia(s): +8.00 pontos.",
+          "Criticidade Alta: +25.00 pontos."
+        ],
+        "total": 39.896552
+      },
+      "signal": {
+        "description": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 21.72 dia(s) para um lead time de 12.00 dia(s), resultando em fator de reposição 1.81. A severidade foi elevada devido à criticidade Alta do material.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 0.7241379310344828
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT005",
+        "metrics": {
+          "cobertura_dias": 21.724137931034484,
+          "cobertura_meses": 0.7241379310344828,
+          "criticidade_alta": true,
+          "fator_reposicao": 1.810344827586207,
+          "lead_time_dias": 12.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "severidade_elevada": true
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ALTO",
+        "title": "Risco de reposição — Eletrodo Revestido 2,5 mm",
+        "type": "RISCO_REPOSICAO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 25.0,
+          "lead_time": 14.0,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Lead time de 21 dia(s): +14.00 pontos.",
+          "Criticidade Alta: +25.00 pontos."
+        ],
+        "total": 39.0
+      },
+      "signal": {
+        "description": "Disjuntor Tripolar 32 A possui cobertura estimada de 38.57 dia(s) para um lead time de 21.00 dia(s), resultando em fator de reposição 1.84. A severidade foi elevada devido à criticidade Alta do material.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 21.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 1.2857142857142856
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT014",
+        "metrics": {
+          "cobertura_dias": 38.57142857142857,
+          "cobertura_meses": 1.2857142857142856,
+          "criticidade_alta": true,
+          "fator_reposicao": 1.8367346938775508,
+          "lead_time_dias": 21.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "severidade_elevada": true
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ALTO",
+        "title": "Risco de reposição — Disjuntor Tripolar 32 A",
+        "type": "RISCO_REPOSICAO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 0.0,
           "criticality": 12.5,
           "lead_time": 0.0,
@@ -962,6 +1075,62 @@
         "severity": "ATENCAO",
         "title": "Redução relevante de consumo — Bico de Contato MIG 1,0 mm",
         "type": "REDUCAO_CONSUMO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 15.131579,
+          "criticality": 0.0,
+          "lead_time": 4.666667,
+          "stock_pressure": 0.0
+        },
+        "explanations": [
+          "Cobertura estimada de 0.395 mês(es): +15.13 pontos.",
+          "Lead time de 7 dia(s): +4.67 pontos."
+        ],
+        "total": 19.798246
+      },
+      "signal": {
+        "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 11.84 dia(s) para um lead time de 7.00 dia(s), resultando em fator de reposição 1.69.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 0.39473684210526316
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Baixa"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT002",
+        "metrics": {
+          "cobertura_dias": 11.842105263157896,
+          "cobertura_meses": 0.39473684210526316,
+          "criticidade_alta": false,
+          "fator_reposicao": 1.6917293233082709,
+          "lead_time_dias": 7.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "severidade_elevada": false
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ATENCAO",
+        "title": "Risco de reposição — Disco Flap 4,5 pol Grão 60",
+        "type": "RISCO_REPOSICAO"
       }
     },
     {
@@ -1765,11 +1934,11 @@
       "materiais_com_sinal": 15,
       "movimentacoes_analisadas": 180,
       "quantidade_total_consumida": 1647.0,
-      "sinais_alto": 11,
-      "sinais_atencao": 16,
+      "sinais_alto": 13,
+      "sinais_atencao": 17,
       "sinais_critico": 4,
       "sinais_info": 4,
-      "total_sinais": 35
+      "total_sinais": 38
     },
     "recommendations": [
       {
@@ -1801,6 +1970,18 @@
         "entity": "MAT008",
         "priority": "ALTO",
         "rationale": "Disco de Corte 4,5 pol concentra 16.47% do custo total e 41.71% da quantidade consumida."
+      },
+      {
+        "action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "entity": "MAT005",
+        "priority": "ALTO",
+        "rationale": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 21.72 dia(s) para um lead time de 12.00 dia(s), resultando em fator de reposição 1.81. A severidade foi elevada devido à criticidade Alta do material."
+      },
+      {
+        "action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "entity": "MAT014",
+        "priority": "ALTO",
+        "rationale": "Disjuntor Tripolar 32 A possui cobertura estimada de 38.57 dia(s) para um lead time de 21.00 dia(s), resultando em fator de reposição 1.84. A severidade foi elevada devido à criticidade Alta do material."
       },
       {
         "action": "Avaliar reposição do material.",
@@ -1885,6 +2066,12 @@
         "entity": "MAT004",
         "priority": "ATENCAO",
         "rationale": "Bico de Contato MIG 1,0 mm apresentou redução de 86.67% no consumo do último mês, passando de 15.00 para 2.00."
+      },
+      {
+        "action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "entity": "MAT002",
+        "priority": "ATENCAO",
+        "rationale": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 11.84 dia(s) para um lead time de 7.00 dia(s), resultando em fator de reposição 1.69."
       },
       {
         "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
@@ -2379,6 +2566,90 @@
         "severity": "ALTO",
         "title": "Baixa cobertura de estoque — Luva de Raspa",
         "type": "BAIXA_COBERTURA"
+      },
+      {
+        "description": "Eletrodo Revestido 2,5 mm possui cobertura estimada de 21.72 dia(s) para um lead time de 12.00 dia(s), resultando em fator de reposição 1.81. A severidade foi elevada devido à criticidade Alta do material.",
+        "entity": "MAT005",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 12.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 0.7241379310344828
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT005",
+        "metrics": {
+          "cobertura_dias": 21.724137931034484,
+          "cobertura_meses": 0.7241379310344828,
+          "criticidade_alta": true,
+          "fator_reposicao": 1.810344827586207,
+          "lead_time_dias": 12.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "priority_score": 39.896552,
+          "severidade_elevada": true
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ALTO",
+        "title": "Risco de reposição — Eletrodo Revestido 2,5 mm",
+        "type": "RISCO_REPOSICAO"
+      },
+      {
+        "description": "Disjuntor Tripolar 32 A possui cobertura estimada de 38.57 dia(s) para um lead time de 21.00 dia(s), resultando em fator de reposição 1.84. A severidade foi elevada devido à criticidade Alta do material.",
+        "entity": "MAT014",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 21.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 1.2857142857142856
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Alta"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT014",
+        "metrics": {
+          "cobertura_dias": 38.57142857142857,
+          "cobertura_meses": 1.2857142857142856,
+          "criticidade_alta": true,
+          "fator_reposicao": 1.8367346938775508,
+          "lead_time_dias": 21.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "priority_score": 39.0,
+          "severidade_elevada": true
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ALTO",
+        "title": "Risco de reposição — Disjuntor Tripolar 32 A",
+        "type": "RISCO_REPOSICAO"
       },
       {
         "description": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6.",
@@ -2988,6 +3259,48 @@
         "type": "CONCENTRACAO_CUSTO"
       },
       {
+        "description": "Disco Flap 4,5 pol Grão 60 possui cobertura estimada de 11.84 dia(s) para um lead time de 7.00 dia(s), resultando em fator de reposição 1.69.",
+        "entity": "MAT002",
+        "evidences": [
+          {
+            "description": "Tempo de reposição cadastrado para o material.",
+            "metric": "Lead_Time_Dias",
+            "source": "estoque",
+            "value": 7.0
+          },
+          {
+            "description": "Cobertura estimada de estoque em meses.",
+            "metric": "cobertura_meses",
+            "source": "estoque",
+            "value": 0.39473684210526316
+          },
+          {
+            "description": "Criticidade operacional cadastrada para o material.",
+            "metric": "Criticidade",
+            "source": "estoque",
+            "value": "Baixa"
+          }
+        ],
+        "id": "REPLENISHMENT-RISK-MAT002",
+        "metrics": {
+          "cobertura_dias": 11.842105263157896,
+          "cobertura_meses": 0.39473684210526316,
+          "criticidade_alta": false,
+          "fator_reposicao": 1.6917293233082709,
+          "lead_time_dias": 7.0,
+          "limite_alto": 1.5,
+          "limite_atencao": 2.0,
+          "limite_critico": 1.0,
+          "priority_score": 19.798246,
+          "severidade_elevada": false
+        },
+        "recommended_action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
+        "rule_origin": "rule_replenishment_risk",
+        "severity": "ATENCAO",
+        "title": "Risco de reposição — Disco Flap 4,5 pol Grão 60",
+        "type": "RISCO_REPOSICAO"
+      },
+      {
         "description": "Disco Flap 4,5 pol Grão 60 possui estoque atual de 30 para mínimo de 30, razão de 1.00.",
         "entity": "MAT002",
         "evidences": [
@@ -3245,12 +3558,12 @@
       }
     ],
     "signals_by_severity": {
-      "ALTO": 11,
-      "ATENCAO": 16,
+      "ALTO": 13,
+      "ATENCAO": 17,
       "CRITICO": 4,
       "INFO": 4
     },
-    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 35 sinais: 4 críticos, 11 altos, 16 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
-    "total_signals": 35
+    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 38 sinais: 4 críticos, 13 altos, 17 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
+    "total_signals": 38
   }
 }
