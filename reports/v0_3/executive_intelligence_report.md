@@ -2,7 +2,7 @@
 
 ## Resumo executivo
 
-Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 38 sinais: 4 críticos, 13 altos, 17 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.
+Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 42 sinais: 4 críticos, 16 altos, 18 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.
 
 ## Indicadores
 
@@ -10,14 +10,14 @@ Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor iden
 - Movimentações analisadas: 180
 - Quantidade total consumida: 1.647
 - Custo total de consumo: R$ 24.606,20
-- Total de sinais: 38
+- Total de sinais: 42
 - Materiais com sinal: 15
 
 ## Sinais por severidade
 
 - CRITICO: 4
-- ALTO: 13
-- ATENCAO: 17
+- ALTO: 16
+- ATENCAO: 18
 - INFO: 4
 
 ## Principais prioridades
@@ -29,22 +29,25 @@ Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor iden
 | 3 | MAT005 | CRITICO | 14,90 | Baixa cobertura de estoque — Eletrodo Revestido 2,5 mm |
 | 4 | MAT007 | CRITICO | 6,92 | Baixa cobertura de estoque — Disco de Corte 7 pol |
 | 5 | MAT008 | ALTO | 40,59 | Alto impacto de custo e consumo — Disco de Corte 4,5 pol |
-| 6 | MAT005 | ALTO | 39,90 | Risco de reposição — Eletrodo Revestido 2,5 mm |
-| 7 | MAT014 | ALTO | 39,00 | Risco de reposição — Disjuntor Tripolar 32 A |
-| 8 | MAT015 | ALTO | 31,50 | Estoque abaixo do mínimo — Luva de Raspa |
-| 9 | MAT007 | ALTO | 30,31 | Alto impacto de custo e consumo — Disco de Corte 7 pol |
-| 10 | MAT010 | ALTO | 30,00 | Estoque abaixo do mínimo — Lâmina de Serra Sabre |
+| 6 | Fornecedor Alfa | ALTO | 40,56 | Exposição de materiais críticos — Fornecedor Alfa |
+| 7 | MAT005 | ALTO | 39,90 | Risco de reposição — Eletrodo Revestido 2,5 mm |
+| 8 | MAT014 | ALTO | 39,00 | Risco de reposição — Disjuntor Tripolar 32 A |
+| 9 | MAT015 | ALTO | 31,50 | Estoque abaixo do mínimo — Luva de Raspa |
+| 10 | MAT007 | ALTO | 30,31 | Alto impacto de custo e consumo — Disco de Corte 7 pol |
 
 ## Recomendações
 
 - **CRITICO [MAT005]:** Avaliar reposição do material. Avaliar cobertura e planejamento de reposição. Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição.
 - **CRITICO [MAT007]:** Avaliar cobertura e planejamento de reposição. Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional. Acompanhar o estoque e avaliar necessidade de reposição. Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **CRITICO [MAT014]:** Avaliar reposição do material. Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
+- **ALTO [Fornecedor Alfa]:** Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor. Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.
+- **ALTO [Fornecedor Delta]:** Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.
 - **ALTO [MAT002]:** Avaliar cobertura e planejamento de reposição. Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Acompanhar o estoque e avaliar necessidade de reposição.
 - **ALTO [MAT008]:** Priorizar análise deste material, pois ele combina impacto financeiro relevante com participação elevada no consumo operacional. Avaliar os principais direcionadores de custo do material e oportunidades de otimização de consumo, aquisição ou reposição. Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **ALTO [MAT010]:** Avaliar reposição do material. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **ALTO [MAT015]:** Avaliar reposição do material. Avaliar cobertura e planejamento de reposição. Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **ALTO [MAT017]:** Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado. Acompanhar o estoque e avaliar necessidade de reposição.
+- **ATENCAO [Fornecedor Beta]:** Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.
 - **ATENCAO [MAT001]:** Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **ATENCAO [MAT003]:** Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.
 - **ATENCAO [MAT004]:** Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo. Acompanhar o estoque e avaliar necessidade de reposição.

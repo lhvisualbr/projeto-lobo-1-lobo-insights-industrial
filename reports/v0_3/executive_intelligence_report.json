@@ -265,6 +265,60 @@
     {
       "priority": {
         "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0,
+          "supplier_cost_share": 20.560468,
+          "supplier_critical_exposure": 20.0
+        },
+        "explanations": [
+          "Fornecedor concentra 41.12% do custo total: +20.56 pontos.",
+          "2 material(is) de criticidade Alta dependem do fornecedor: +20.00 pontos."
+        ],
+        "total": 40.560468
+      },
+      "signal": {
+        "description": "Fornecedor Alfa atende 2 material(is) de criticidade Alta, entre 4 material(is) associados.",
+        "entity": "Fornecedor Alfa",
+        "evidences": [
+          {
+            "description": "Quantidade de materiais distintos de criticidade Alta atendidos pelo fornecedor.",
+            "metric": "materiais_criticos",
+            "source": "fornecedor",
+            "value": 2
+          },
+          {
+            "description": "Quantidade total de materiais associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4
+          },
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 41.12093699961799
+          }
+        ],
+        "id": "SUPPLIER-CRITICAL-EXPOSURE-FORNECEDOR-ALFA",
+        "metrics": {
+          "limite_critico": 3,
+          "limite_materiais_criticos": 2,
+          "materiais": 4,
+          "materiais_criticos": 2,
+          "participacao_custo_pct": 41.12093699961799
+        },
+        "recommended_action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "rule_origin": "rule_supplier_critical_exposure",
+        "severity": "ALTO",
+        "title": "Exposição de materiais críticos — Fornecedor Alfa",
+        "type": "EXPOSICAO_FORNECEDOR_CRITICO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "coverage_pressure": 6.896552,
           "criticality": 25.0,
           "lead_time": 8.0,
@@ -532,6 +586,60 @@
     {
       "priority": {
         "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0,
+          "supplier_cost_share": 6.825516,
+          "supplier_critical_exposure": 20.0
+        },
+        "explanations": [
+          "Fornecedor concentra 13.65% do custo total: +6.83 pontos.",
+          "2 material(is) de criticidade Alta dependem do fornecedor: +20.00 pontos."
+        ],
+        "total": 26.825516
+      },
+      "signal": {
+        "description": "Fornecedor Delta atende 2 material(is) de criticidade Alta, entre 4 material(is) associados.",
+        "entity": "Fornecedor Delta",
+        "evidences": [
+          {
+            "description": "Quantidade de materiais distintos de criticidade Alta atendidos pelo fornecedor.",
+            "metric": "materiais_criticos",
+            "source": "fornecedor",
+            "value": 2
+          },
+          {
+            "description": "Quantidade total de materiais associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4
+          },
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 13.65103104095716
+          }
+        ],
+        "id": "SUPPLIER-CRITICAL-EXPOSURE-FORNECEDOR-DELTA",
+        "metrics": {
+          "limite_critico": 3,
+          "limite_materiais_criticos": 2,
+          "materiais": 4,
+          "materiais_criticos": 2,
+          "participacao_custo_pct": 13.65103104095716
+        },
+        "recommended_action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "rule_origin": "rule_supplier_critical_exposure",
+        "severity": "ALTO",
+        "title": "Exposição de materiais críticos — Fornecedor Delta",
+        "type": "EXPOSICAO_FORNECEDOR_CRITICO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "consumption_variation": 25.0,
           "coverage_pressure": 0.0,
           "criticality": 0.0,
@@ -623,6 +731,58 @@
         "severity": "ALTO",
         "title": "Concentração relevante de custo — Disco de Corte 4,5 pol",
         "type": "CONCENTRACAO_CUSTO"
+      }
+    },
+    {
+      "priority": {
+        "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0,
+          "supplier_cost_share": 20.560468
+        },
+        "explanations": [
+          "Fornecedor concentra 41.12% do custo total: +20.56 pontos."
+        ],
+        "total": 20.560468
+      },
+      "signal": {
+        "description": "Fornecedor Alfa concentra 41.12% do custo total de consumo e atende 4 material(is).",
+        "entity": "Fornecedor Alfa",
+        "evidences": [
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 41.12093699961799
+          },
+          {
+            "description": "Custo total associado aos materiais do fornecedor no período analisado.",
+            "metric": "custo_total",
+            "source": "fornecedor",
+            "value": 10118.3
+          },
+          {
+            "description": "Quantidade de materiais distintos associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4.0
+          }
+        ],
+        "id": "SUPPLIER-COST-CONCENTRATION-FORNECEDOR-ALFA",
+        "metrics": {
+          "custo_total": 10118.3,
+          "limite_alto_pct": 40.0,
+          "limite_concentracao_pct": 25.0,
+          "materiais": 4,
+          "participacao_custo_pct": 41.12093699961799
+        },
+        "recommended_action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "rule_origin": "rule_supplier_cost_concentration",
+        "severity": "ALTO",
+        "title": "Concentração financeira por fornecedor — Fornecedor Alfa",
+        "type": "CONCENTRACAO_FORNECEDOR"
       }
     },
     {
@@ -1473,6 +1633,58 @@
     {
       "priority": {
         "components": {
+          "coverage_pressure": 0.0,
+          "criticality": 0.0,
+          "lead_time": 0.0,
+          "stock_pressure": 0.0,
+          "supplier_cost_share": 13.20277
+        },
+        "explanations": [
+          "Fornecedor concentra 26.41% do custo total: +13.20 pontos."
+        ],
+        "total": 13.20277
+      },
+      "signal": {
+        "description": "Fornecedor Beta concentra 26.41% do custo total de consumo e atende 4 material(is).",
+        "entity": "Fornecedor Beta",
+        "evidences": [
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 26.405540067137554
+          },
+          {
+            "description": "Custo total associado aos materiais do fornecedor no período analisado.",
+            "metric": "custo_total",
+            "source": "fornecedor",
+            "value": 6497.4
+          },
+          {
+            "description": "Quantidade de materiais distintos associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4.0
+          }
+        ],
+        "id": "SUPPLIER-COST-CONCENTRATION-FORNECEDOR-BETA",
+        "metrics": {
+          "custo_total": 6497.4,
+          "limite_alto_pct": 40.0,
+          "limite_concentracao_pct": 25.0,
+          "materiais": 4,
+          "participacao_custo_pct": 26.405540067137554
+        },
+        "recommended_action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "rule_origin": "rule_supplier_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração financeira por fornecedor — Fornecedor Beta",
+        "type": "CONCENTRACAO_FORNECEDOR"
+      }
+    },
+    {
+      "priority": {
+        "components": {
           "consumption_variation": 12.5,
           "coverage_pressure": 0.0,
           "criticality": 0.0,
@@ -1929,16 +2141,17 @@
   "report": {
     "indicators": {
       "custo_total_consumo": 24606.199999999997,
+      "fornecedores_com_sinal": 3,
       "maior_priority_score": 46.25,
       "materiais_analisados": 20,
       "materiais_com_sinal": 15,
       "movimentacoes_analisadas": 180,
       "quantidade_total_consumida": 1647.0,
-      "sinais_alto": 13,
-      "sinais_atencao": 17,
+      "sinais_alto": 16,
+      "sinais_atencao": 18,
       "sinais_critico": 4,
       "sinais_info": 4,
-      "total_sinais": 38
+      "total_sinais": 42
     },
     "recommendations": [
       {
@@ -1972,6 +2185,12 @@
         "rationale": "Disco de Corte 4,5 pol concentra 16.47% do custo total e 41.71% da quantidade consumida."
       },
       {
+        "action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "entity": "Fornecedor Alfa",
+        "priority": "ALTO",
+        "rationale": "Fornecedor Alfa atende 2 material(is) de criticidade Alta, entre 4 material(is) associados."
+      },
+      {
         "action": "Revisar o planejamento de reposição, o ponto de pedido e a cobertura disponível considerando o lead time e a criticidade operacional do material.",
         "entity": "MAT005",
         "priority": "ALTO",
@@ -2002,6 +2221,12 @@
         "rationale": "Lâmina de Serra Sabre possui estoque atual de 5, abaixo do mínimo de 6."
       },
       {
+        "action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "entity": "Fornecedor Delta",
+        "priority": "ALTO",
+        "rationale": "Fornecedor Delta atende 2 material(is) de criticidade Alta, entre 4 material(is) associados."
+      },
+      {
         "action": "Verificar a causa do aumento de consumo e avaliar se o planejamento de reposição continua adequado.",
         "entity": "MAT017",
         "priority": "ALTO",
@@ -2012,6 +2237,12 @@
         "entity": "MAT008",
         "priority": "ALTO",
         "rationale": "Disco de Corte 4,5 pol representa 16.47% do custo total de consumo no período analisado."
+      },
+      {
+        "action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "entity": "Fornecedor Alfa",
+        "priority": "ALTO",
+        "rationale": "Fornecedor Alfa concentra 41.12% do custo total de consumo e atende 4 material(is)."
       },
       {
         "action": "Avaliar cobertura e planejamento de reposição.",
@@ -2114,6 +2345,12 @@
         "entity": "MAT003",
         "priority": "ATENCAO",
         "rationale": "Lixa de Ferro Grão 80 apresentou redução de 53.85% no consumo do último mês, passando de 13.00 para 6.00."
+      },
+      {
+        "action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "entity": "Fornecedor Beta",
+        "priority": "ATENCAO",
+        "rationale": "Fornecedor Beta concentra 26.41% do custo total de consumo e atende 4 material(is)."
       },
       {
         "action": "Verificar se a redução representa mudança operacional, sazonalidade, alteração de demanda ou possível anomalia nos registros de consumo.",
@@ -2796,6 +3033,120 @@
         "type": "ESTOQUE_PROXIMO_MINIMO"
       },
       {
+        "description": "Fornecedor Alfa concentra 41.12% do custo total de consumo e atende 4 material(is).",
+        "entity": "Fornecedor Alfa",
+        "evidences": [
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 41.12093699961799
+          },
+          {
+            "description": "Custo total associado aos materiais do fornecedor no período analisado.",
+            "metric": "custo_total",
+            "source": "fornecedor",
+            "value": 10118.3
+          },
+          {
+            "description": "Quantidade de materiais distintos associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4.0
+          }
+        ],
+        "id": "SUPPLIER-COST-CONCENTRATION-FORNECEDOR-ALFA",
+        "metrics": {
+          "custo_total": 10118.3,
+          "limite_alto_pct": 40.0,
+          "limite_concentracao_pct": 25.0,
+          "materiais": 4,
+          "participacao_custo_pct": 41.12093699961799,
+          "priority_score": 20.560468
+        },
+        "recommended_action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "rule_origin": "rule_supplier_cost_concentration",
+        "severity": "ALTO",
+        "title": "Concentração financeira por fornecedor — Fornecedor Alfa",
+        "type": "CONCENTRACAO_FORNECEDOR"
+      },
+      {
+        "description": "Fornecedor Alfa atende 2 material(is) de criticidade Alta, entre 4 material(is) associados.",
+        "entity": "Fornecedor Alfa",
+        "evidences": [
+          {
+            "description": "Quantidade de materiais distintos de criticidade Alta atendidos pelo fornecedor.",
+            "metric": "materiais_criticos",
+            "source": "fornecedor",
+            "value": 2
+          },
+          {
+            "description": "Quantidade total de materiais associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4
+          },
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 41.12093699961799
+          }
+        ],
+        "id": "SUPPLIER-CRITICAL-EXPOSURE-FORNECEDOR-ALFA",
+        "metrics": {
+          "limite_critico": 3,
+          "limite_materiais_criticos": 2,
+          "materiais": 4,
+          "materiais_criticos": 2,
+          "participacao_custo_pct": 41.12093699961799,
+          "priority_score": 40.560468
+        },
+        "recommended_action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "rule_origin": "rule_supplier_critical_exposure",
+        "severity": "ALTO",
+        "title": "Exposição de materiais críticos — Fornecedor Alfa",
+        "type": "EXPOSICAO_FORNECEDOR_CRITICO"
+      },
+      {
+        "description": "Fornecedor Delta atende 2 material(is) de criticidade Alta, entre 4 material(is) associados.",
+        "entity": "Fornecedor Delta",
+        "evidences": [
+          {
+            "description": "Quantidade de materiais distintos de criticidade Alta atendidos pelo fornecedor.",
+            "metric": "materiais_criticos",
+            "source": "fornecedor",
+            "value": 2
+          },
+          {
+            "description": "Quantidade total de materiais associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4
+          },
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 13.65103104095716
+          }
+        ],
+        "id": "SUPPLIER-CRITICAL-EXPOSURE-FORNECEDOR-DELTA",
+        "metrics": {
+          "limite_critico": 3,
+          "limite_materiais_criticos": 2,
+          "materiais": 4,
+          "materiais_criticos": 2,
+          "participacao_custo_pct": 13.65103104095716,
+          "priority_score": 26.825516
+        },
+        "recommended_action": "Avaliar alternativas de fornecimento para os materiais críticos, contingência de abastecimento e risco de dependência do fornecedor.",
+        "rule_origin": "rule_supplier_critical_exposure",
+        "severity": "ALTO",
+        "title": "Exposição de materiais críticos — Fornecedor Delta",
+        "type": "EXPOSICAO_FORNECEDOR_CRITICO"
+      },
+      {
         "description": "Disco de Desbaste 7 pol apresentou redução de 92.54% no consumo do último mês, passando de 67.00 para 5.00.",
         "entity": "MAT001",
         "evidences": [
@@ -3409,6 +3760,44 @@
         "type": "ESTOQUE_PROXIMO_MINIMO"
       },
       {
+        "description": "Fornecedor Beta concentra 26.41% do custo total de consumo e atende 4 material(is).",
+        "entity": "Fornecedor Beta",
+        "evidences": [
+          {
+            "description": "Participação do fornecedor no custo total de consumo.",
+            "metric": "participacao_custo_pct",
+            "source": "fornecedor",
+            "value": 26.405540067137554
+          },
+          {
+            "description": "Custo total associado aos materiais do fornecedor no período analisado.",
+            "metric": "custo_total",
+            "source": "fornecedor",
+            "value": 6497.4
+          },
+          {
+            "description": "Quantidade de materiais distintos associados ao fornecedor.",
+            "metric": "materiais",
+            "source": "fornecedor",
+            "value": 4.0
+          }
+        ],
+        "id": "SUPPLIER-COST-CONCENTRATION-FORNECEDOR-BETA",
+        "metrics": {
+          "custo_total": 6497.4,
+          "limite_alto_pct": 40.0,
+          "limite_concentracao_pct": 25.0,
+          "materiais": 4,
+          "participacao_custo_pct": 26.405540067137554,
+          "priority_score": 13.20277
+        },
+        "recommended_action": "Avaliar a dependência financeira deste fornecedor, alternativas de fornecimento e estratégias para reduzir exposição a uma única fonte.",
+        "rule_origin": "rule_supplier_cost_concentration",
+        "severity": "ATENCAO",
+        "title": "Concentração financeira por fornecedor — Fornecedor Beta",
+        "type": "CONCENTRACAO_FORNECEDOR"
+      },
+      {
         "description": "Disco de Corte 7 pol apresentou redução de 45.98% no consumo do último mês, passando de 87.00 para 47.00.",
         "entity": "MAT007",
         "evidences": [
@@ -3558,12 +3947,12 @@
       }
     ],
     "signals_by_severity": {
-      "ALTO": 13,
-      "ATENCAO": 17,
+      "ALTO": 16,
+      "ATENCAO": 18,
       "CRITICO": 4,
       "INFO": 4
     },
-    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 38 sinais: 4 críticos, 13 altos, 17 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
-    "total_signals": 38
+    "summary": "Foram analisadas 180 movimentações entre 01/06/2026 e 31/08/2026. O motor identificou 42 sinais: 4 críticos, 16 altos, 18 de atenção e 4 informativos. A maior prioridade identificada foi MAT005 — Estoque abaixo do mínimo — Eletrodo Revestido 2,5 mm, com score 46.25 e severidade CRITICO.",
+    "total_signals": 42
   }
 }
