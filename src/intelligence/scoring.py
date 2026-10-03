@@ -25,6 +25,12 @@ COST_SHARE_REFERENCE_PCT = 20.0
 COST_CONSUMPTION_SHARE_WEIGHT = 20.0
 COST_CONSUMPTION_SHARE_REFERENCE_PCT = 20.0
 
+SUPPLIER_COST_SHARE_WEIGHT = 25.0
+SUPPLIER_COST_SHARE_REFERENCE_PCT = 50.0
+
+SUPPLIER_CRITICAL_EXPOSURE_WEIGHT = 30.0
+SUPPLIER_CRITICAL_MATERIAL_REFERENCE = 3.0
+
 NEAR_MINIMUM_RATIO = 1.25
 LEAD_TIME_REFERENCE_DAYS = 30.0
 
@@ -377,11 +383,6 @@ def _consumption_variation_component(
 def _cost_share_component(
     signal: Signal,
 ) -> tuple[float, str | None]:
-    """
-    Pontua a concentração financeira individual
-    de sinais do domínio de custos.
-    """
-
     signal_type = _normalize_text(
         signal.type
     )
@@ -431,11 +432,6 @@ def _cost_share_component(
 def _cost_consumption_share_component(
     signal: Signal,
 ) -> tuple[float, str | None]:
-    """
-    Acrescenta pressão de volume somente ao sinal
-    combinado de alto impacto de custo e consumo.
-    """
-
     signal_type = _normalize_text(
         signal.type
     )
@@ -477,6 +473,110 @@ def _cost_consumption_share_component(
     )
 
 
+def _supplier_cost_share_component(
+    signal: Signal,
+) -> tuple[float, str | None]:
+    """
+    Pontua a concentração financeira agregada
+    no nível de fornecedor.
+    """
+
+    signal_type = _normalize_text(
+        signal.type
+    )
+
+    supported_types = {
+        "concentracao_fornecedor",
+        "exposicao_fornecedor_critico",
+    }
+
+    if signal_type not in supported_types:
+        return 0.0, None
+
+    cost_share = _metric(
+        signal,
+        "participacao_custo_pct",
+    )
+
+    if cost_share is None:
+        return 0.0, None
+
+    if cost_share <= 0:
+        return 0.0, None
+
+    normalized = _clamp(
+        cost_share
+        / SUPPLIER_COST_SHARE_REFERENCE_PCT
+    )
+
+    score = (
+        normalized
+        * SUPPLIER_COST_SHARE_WEIGHT
+    )
+
+    if score == 0:
+        return 0.0, None
+
+    return (
+        score,
+        (
+            f"Fornecedor concentra "
+            f"{cost_share:.2f}% do custo total: "
+            f"+{score:.2f} pontos."
+        ),
+    )
+
+
+def _supplier_critical_exposure_component(
+    signal: Signal,
+) -> tuple[float, str | None]:
+    """
+    Pontua a quantidade de materiais de criticidade Alta
+    dependentes do mesmo fornecedor.
+    """
+
+    signal_type = _normalize_text(
+        signal.type
+    )
+
+    if signal_type != "exposicao_fornecedor_critico":
+        return 0.0, None
+
+    critical_materials = _metric(
+        signal,
+        "materiais_criticos",
+    )
+
+    if critical_materials is None:
+        return 0.0, None
+
+    if critical_materials <= 0:
+        return 0.0, None
+
+    normalized = _clamp(
+        critical_materials
+        / SUPPLIER_CRITICAL_MATERIAL_REFERENCE
+    )
+
+    score = (
+        normalized
+        * SUPPLIER_CRITICAL_EXPOSURE_WEIGHT
+    )
+
+    if score == 0:
+        return 0.0, None
+
+    return (
+        score,
+        (
+            f"{critical_materials:g} material(is) "
+            f"de criticidade Alta dependem "
+            f"do fornecedor: "
+            f"+{score:.2f} pontos."
+        ),
+    )
+
+
 def score_signal(
     signal: Signal,
 ) -> PriorityScore:
@@ -492,15 +592,19 @@ def score_signal(
     Comportamento de consumo:
     - magnitude da variação: até 25.
 
-    Custos:
+    Custos por material:
     - participação no custo total: até 25;
-    - participação no volume, para sinal combinado:
+    - participação no volume para sinal combinado:
       até 20.
+
+    Fornecedores:
+    - concentração financeira: até 25;
+    - exposição de materiais críticos: até 30.
 
     A severidade NÃO faz parte do score porque permanece
     como critério primário da ordenação.
 
-    O total final permanece limitado entre 0 e 100.
+    O total permanece limitado entre 0 e 100.
     """
 
     components: dict[str, float] = {}
@@ -597,6 +701,47 @@ def score_signal(
 
         components[
             "consumption_share"
+        ] = round(
+            value,
+            6,
+        )
+
+        if explanation is not None:
+            explanations.append(
+                explanation
+            )
+
+    if signal_type in {
+        "concentracao_fornecedor",
+        "exposicao_fornecedor_critico",
+    }:
+        value, explanation = (
+            _supplier_cost_share_component(
+                signal
+            )
+        )
+
+        components[
+            "supplier_cost_share"
+        ] = round(
+            value,
+            6,
+        )
+
+        if explanation is not None:
+            explanations.append(
+                explanation
+            )
+
+    if signal_type == "exposicao_fornecedor_critico":
+        value, explanation = (
+            _supplier_critical_exposure_component(
+                signal
+            )
+        )
+
+        components[
+            "supplier_critical_exposure"
         ] = round(
             value,
             6,

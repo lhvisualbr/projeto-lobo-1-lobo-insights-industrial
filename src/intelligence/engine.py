@@ -31,6 +31,15 @@ from intelligence.scoring import (
     RankedSignal,
     prioritize_signals,
 )
+from intelligence.supplier_rules import (
+    evaluate_supplier_rules,
+)
+
+
+SUPPLIER_SIGNAL_TYPES = {
+    "CONCENTRACAO_FORNECEDOR",
+    "EXPOSICAO_FORNECEDOR_CRITICO",
+}
 
 
 @dataclass(frozen=True, slots=True)
@@ -152,6 +161,15 @@ def _count_signals(
     return result
 
 
+def _is_supplier_signal(
+    signal: Signal,
+) -> bool:
+    return (
+        signal.type
+        in SUPPLIER_SIGNAL_TYPES
+    )
+
+
 def _build_indicators(
     features: pd.DataFrame,
     context: FeatureContext,
@@ -162,9 +180,20 @@ def _build_indicators(
         signals
     )
 
-    entities = {
+    material_entities = {
         signal.entity
         for signal in signals
+        if not _is_supplier_signal(
+            signal
+        )
+    }
+
+    supplier_entities = {
+        signal.entity
+        for signal in signals
+        if _is_supplier_signal(
+            signal
+        )
     }
 
     top_score = (
@@ -190,7 +219,10 @@ def _build_indicators(
             len(signals)
         ),
         "materiais_com_sinal": int(
-            len(entities)
+            len(material_entities)
+        ),
+        "fornecedores_com_sinal": int(
+            len(supplier_entities)
         ),
         "sinais_info": int(
             counts["INFO"]
@@ -365,6 +397,9 @@ def run_engine(
             features
         )
         + evaluate_lead_time_rules(
+            features
+        )
+        + evaluate_supplier_rules(
             features
         )
     )
