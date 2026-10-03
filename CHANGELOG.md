@@ -4,6 +4,35 @@
 
 Registra somente o que foi realmente produzido em cada versão.
 
+## V0.3.0 — Executive Intelligence Foundation
+
+Release estável publicada em 03/10/2026.
+
+### Adicionado
+- Executive Intelligence Engine determinístico e explicável.
+- Modelos estruturados de sinais, evidências e recomendações.
+- Inteligência de estoque, consumo, custos, risco de reposição e fornecedores.
+- Scoring e priorização por severidade, score e ID.
+- Relatórios executivos em JSON, Markdown e TXT.
+- Validação de portabilidade numérica entre localidades.
+- Suíte automatizada específica da V0.3.0.
+
+### Validação
+- Baseline histórica V0.2.1: PASS.
+- Qualidade dos dados: 36/36 PASS.
+- Testes V0.3.0: 194/194 PASS.
+- FAIL/ERROR: 0.
+- SKIP: 0.
+- ZIP oficial auditado: PASS.
+
+### Release
+- Tag: `v0.3.0`
+- Pacote: `Projeto_Lobo_1_Lobo_Insights_Industrial_V0_3_0.zip`
+- SHA-256: `EF49131D9725759EA13C983766DF7717F200E903F19665E048B53102D1D0541D`
+
+### Observação
+Todos os dados utilizados permanecem 100% sintéticos. A release não inclui API, Docker, Power BI integrado, n8n ou automação operacional.
+
 ## V0.2.1 — Packaging & Reproducibility Fix
 
 Microversão técnica de *release engineering* sobre a V0.2 auditada. **Nenhuma alteração funcional, analítica ou visual**: o XLSX atual é byte a byte igual ao XLSX auditado da V0.2 (SHA-256 `81f51886dc3d68408073a9e0bf54859ae100fe418c2c30060b8d92fb9662b846`); dados, KPIs, fórmulas, rankings, Pareto, dashboard, gráficos e resultados não mudaram.
