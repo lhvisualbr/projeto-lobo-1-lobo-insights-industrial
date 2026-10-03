@@ -5,6 +5,7 @@
 
 [![Version](https://img.shields.io/badge/version-v0.3.0-blue)](#)
 [![Tests](https://img.shields.io/badge/tests-194%2F194%20PASS-brightgreen)](#)
+[![CI](https://github.com/lhvisualbr/projeto-lobo-1-lobo-insights-industrial/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lhvisualbr/projeto-lobo-1-lobo-insights-industrial/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](#)
 [![Data](https://img.shields.io/badge/data-100%25%20synthetic-orange)](#)
 
