@@ -155,6 +155,8 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
+> Se `Activate.ps1` for bloqueado pela política de execução do PowerShell, não é necessário alterar a política do sistema. A ativação da `.venv` é opcional: use `.\.venv\Scripts\python.exe` no lugar de `python` nos comandos seguintes e `.\.venv\Scripts\python.exe -m pip` no lugar de `pip`.
+
 ### Linux / macOS
 
 ```bash
@@ -263,11 +265,26 @@ Ela inclui indicadores, análises e dashboard executivo.
 
 # ✅ Como validar o projeto
 
-Execute:
+### Windows PowerShell
+
+Se o LibreOffice não estiver disponível no `PATH`, informe explicitamente o executável. Em uma instalação padrão do Windows:
+
+```powershell
+$env:LOBO_SOFFICE="C:\Program Files\LibreOffice\program\soffice.exe"
+.\.venv\Scripts\python.exe scripts\executar_testes_v0_3.py
+```
+
+Se o LibreOffice estiver instalado em outro local, ajuste o caminho de `LOBO_SOFFICE`.
+
+### Linux / macOS
+
+Com a `.venv` ativada e `soffice` disponível no `PATH`:
 
 ```bash
 python scripts/executar_testes_v0_3.py
 ```
+
+Caso necessário, `LOBO_SOFFICE` também pode receber o caminho completo do executável.
 
 Resultado validado da V0.3.0:
 
@@ -583,6 +600,8 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
+> If `Activate.ps1` is blocked by the PowerShell execution policy, you do not need to change the system policy. Activating `.venv` is optional: use `.\.venv\Scripts\python.exe` instead of `python` in the following commands and `.\.venv\Scripts\python.exe -m pip` instead of `pip`.
+
 ### Linux / macOS
 
 ```bash
@@ -629,9 +648,26 @@ reports/v0_3/executive_intelligence_report.md
 
 # ✅ Run validation
 
+### Windows PowerShell
+
+If LibreOffice is not available through `PATH`, point the project to the executable explicitly. For a standard Windows installation:
+
+```powershell
+$env:LOBO_SOFFICE="C:\Program Files\LibreOffice\program\soffice.exe"
+.\.venv\Scripts\python.exe scripts\executar_testes_v0_3.py
+```
+
+If LibreOffice is installed elsewhere, adjust the `LOBO_SOFFICE` path.
+
+### Linux / macOS
+
+With `.venv` activated and `soffice` available through `PATH`:
+
 ```bash
 python scripts/executar_testes_v0_3.py
 ```
+
+If needed, `LOBO_SOFFICE` can also point to the full executable path.
 
 Validated result:
 

@@ -1,4 +1,7 @@
-# Keep source and synthetic data files byte-stable across operating systems.
+# Keep text files byte-stable across operating systems.
 # Historical baseline and reproducibility checks use SHA-256 hashes.
+* text=auto eol=lf
+
+# Explicit rules for source code and synthetic datasets.
 *.py text eol=lf
 *.csv text eol=lf
